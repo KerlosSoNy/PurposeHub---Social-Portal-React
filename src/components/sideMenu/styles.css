@@ -1,0 +1,15 @@
+.sideMenu-body{
+    width: clamp(200px,17.155vw,362px);
+    max-height: 450px;
+    position: fixed;
+    overflow-y: auto; 
+}
+
+.active-icon {
+    filter: invert(40%) sepia(80%) saturate(200%) hue-rotate(180deg);
+}
+
+.mainContainerSideMenu{
+width: clamp(200px,28vw,420px);
+max-height: 450px;
+}
