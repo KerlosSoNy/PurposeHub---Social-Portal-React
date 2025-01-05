@@ -5,7 +5,7 @@ interface PostImageProps {
 
 export function PostImage({ imageUrl, alt }: PostImageProps) {
     return (
-        <div className="mt-3">
+        <div className="mt-3 me-[12px]">
             <img
                 src={imageUrl}
                 alt={alt}

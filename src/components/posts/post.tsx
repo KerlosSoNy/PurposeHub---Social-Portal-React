@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { CommentInput } from "./commentInput";
 import Content from "./content";
 import { EngagementStats } from "./likeAndShare";
 import { PostHeader } from "./postHeader";
 import { PostImage } from "./postImage";
+import CommentList from "./comments/commentsList";
+import { mockComments } from "./comments/constant";
 
 interface PostProps {
     avatarUrl: string;
@@ -27,8 +30,9 @@ export function Post({
     comments,
     userAvatarUrl,
 }: PostProps) {
+    const [showAllComments, setShowAllComments] = useState(true);
     return (
-        <div className="bg-white rounded-[20px] px-[34px] py-[24px]  w-full">
+        <div className="bg-white rounded-[20px] ps-[34px] pe-[35px] py-[24px]  w-full">
             <PostHeader
                 avatarUrl={avatarUrl}
                 username={username}
@@ -37,7 +41,11 @@ export function Post({
             <Content content={content}
                 hashtags={hashtags} />
             <PostImage imageUrl={imageUrl} alt={`${username}'s post`} />
-            <EngagementStats likes={likes} comments={comments} />
+            <EngagementStats likes={likes} comments={comments} sponser setShowAllComments={setShowAllComments} showAllComments={showAllComments} />
+            {
+                !showAllComments &&
+                <CommentList comments={mockComments} />
+            }
             <CommentInput userAvatarUrl={userAvatarUrl} />
         </div>
     );

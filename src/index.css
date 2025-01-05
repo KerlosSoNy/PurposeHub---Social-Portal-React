@@ -10,6 +10,10 @@ body {
     background-color: #f5f5f5;
 }
 
+.text-with-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 .main-body{
     padding-left: clamp(20px,3.13vw,60px);
     padding-right:  clamp(20px,3.13vw,60px);

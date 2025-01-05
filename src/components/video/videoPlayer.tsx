@@ -35,7 +35,7 @@ export const VideoPlayer = ({ link }: { link: string }) => {
             <button
                 title='start'
                 className='p-2 '
-                onClick={openVideo}
+            // onClick={openVideo}
             >
                 <CirclePlay color='white'
                     size={48} />

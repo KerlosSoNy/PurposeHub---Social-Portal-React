@@ -1,4 +1,5 @@
-import { EllipsisVertical } from 'lucide-react';
+import { EllipsisVertical, EyeOff } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
 
 interface PostHeaderProps {
     avatarUrl: string;
@@ -7,6 +8,22 @@ interface PostHeaderProps {
 }
 
 export function PostHeader({ avatarUrl, username, timestamp }: PostHeaderProps) {
+    const [isOpen, setIsOpen] = useState(false);
+    const menuRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        function handleClickOutside(event: MouseEvent) {
+            if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+                setIsOpen(false);
+            }
+        }
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [menuRef]);
+
     return (
         <div className="flex items-start justify-between">
             <div className="flex gap-3">
@@ -25,16 +42,44 @@ export function PostHeader({ avatarUrl, username, timestamp }: PostHeaderProps) 
                             Follow
                         </span>
                     </div>
-
                 </div>
             </div>
-            <div className='flex flex-row items-center'>
+            <div className='flex flex-row gap-[10px] items-center relative' ref={menuRef}>
                 <span className="text-[#AAAAAA] text-[16px]">
                     23.15k views
                 </span>
-                <button title='More' className="text-gray-500 hover:bg-gray-100 p-2 rounded-full">
+                <button title='More' onClick={() => setIsOpen(!isOpen)} className="text-gray-500 hover:bg-gray-100 rounded-full">
                     <EllipsisVertical size={30} color='#C4C4C4' />
                 </button>
+                {
+                    isOpen && (
+                        <div className="absolute  w-[256px] right-3 top-16 bg-white rounded-md">
+                            <ul className="ps-[24px] pe-[40px] pt-[24px] pb-[20px] flex flex-col gap-[24px]">
+                                <li className="flex items-start gap-[8px] text-gray-700 hover:bg-gray-100 cursor-pointer">
+                                    <EyeOff color='#8C8B8B' size={28} />
+                                    <div className='flex flex-col gap-[4px]'>
+                                        <span className='text-[14px] text-black'>Hide similar content</span>
+                                        <span className='text-[12px] text-[#777777]'>similar content</span>
+                                    </div>
+                                </li>
+                                <li className="flex items-start gap-[8px] text-gray-700 hover:bg-gray-100 cursor-pointer">
+                                    <img src='/icons/Block.svg' alt='Block' className='w-[28px] h-[28px]' />
+                                    <div className='flex flex-col gap-[4px]'>
+                                        <span className='text-[14px] text-black'>Block Person</span>
+                                        <span className='text-[12px] text-[#777777]'>hide all</span>
+                                    </div>
+                                </li>
+                                <li className="flex items-start gap-[8px] text-gray-700 hover:bg-gray-100 cursor-pointer">
+                                    <img src='/icons/Bell.png' alt='Bell' className='w-[28px] h-[28px]' />
+                                    <div className='flex flex-col gap-[4px]'>
+                                        <span className='text-[14px] text-black'>Turn on notification</span>
+                                        <span className='text-[12px] text-[#777777]'>Get notify</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    )
+                }
             </div>
         </div>
     );
