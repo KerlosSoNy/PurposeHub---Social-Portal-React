@@ -5,7 +5,10 @@ import './styles.css'
 export default function SideMenu() {
     const [active, setActive] = useState<number | null>(1)
     return (
-        <div className="sticky shadow-lg hidden lg:flex flex-col gap-[30px] rounded-[20px] bg-white px-[30px] py-[26px]">
+        <div className="fixed shadow-lg hidden lg:flex flex-col gap-[30px] 
+        rounded-[20px] bg-white px-[30px] py-[26px] 
+        sm:w-[300px] md:w-[300px] lg:w-[300px] xl:w-[207px] minxl:w-[239px] 2xl:w-[287px] 3xl:w-[337px]
+        ">
             {
                 links.map((link) => (
                     <div className='flex flex-row items-center gap-[9px] hover:cursor-pointer' onClick={() => setActive(link.id)} key={link.id}>

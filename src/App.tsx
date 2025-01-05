@@ -13,7 +13,7 @@ function App() {
     <div className="flex flex-col max-w-screen overflow-hidden">
       <Navbar />
       <div className="flex flex-row justify-center xl:justify-between gap-[37px] main-body min-w-screen pb-[27px] pt-[calc(64px+32px)]">
-        <div className="hidden w-[clamp(300px,337px,369px)] xl:block relative">
+        <div className="hidden !w-[clamp(300px,337px,369px)] xl:flex flex-row justify-center relative">
           <SideMenu />
         </div>
         <MidComponent />
