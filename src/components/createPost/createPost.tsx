@@ -17,7 +17,7 @@ export default function CreatePost() {
                     <img src="/posts/badge.png" alt="Emoji" className="w-[40px] h-[40px]" />
                 </div>
                 <button className="flex flex-row gap-[8px] text-white rounded-full w-[91px] h-[40px] bg-[#018AAF] font-bold text-[16px] items-center justify-center">
-                    Post
+                    <span className="pb-[2px]">Post</span>
                     <img src="/posts/arrow.svg" alt="Arrow" className="w-[20px] h-[20px]" />
                 </button>
             </div>
