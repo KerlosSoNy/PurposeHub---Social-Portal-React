@@ -24,6 +24,10 @@ body {
     padding-right:  clamp(20px,3.13vw,60px);
 }
 
+.no-scroll{
+    overflow: hidden;
+}
+
 #progress {
     position: sticky;
     top: 0;

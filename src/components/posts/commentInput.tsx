@@ -33,7 +33,7 @@ export function CommentInput({ userAvatarUrl, extraIcons, animation }: CommentIn
                 <input
                     type="text"
                     placeholder="Write a comment here..."
-                    className="w-full py-2 px-4 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-transparent"
+                    className="w-full py-2 px-4 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-transparent text-[#848484]"
                 />
             </div>
             <div className="flex flex-row justify-center items-center gap-[15px]">
@@ -43,8 +43,13 @@ export function CommentInput({ userAvatarUrl, extraIcons, animation }: CommentIn
                         {extraIcons}
                     </button>
                 }
-                <img src="/posts/emoji.png" className="w-[40px] h-[40px] hover:cursor-pointer" alt="emoji" />
-                <img src="/posts/pic.png" className="w-[40px] h-[40px] hover:cursor-pointer" alt="emoji" />
+                <button type="button" title="Emoji">
+                    <img src="/posts/emoji.png" className="w-[40px] h-[40px] hover:cursor-pointer" alt="emoji" />
+                </button>
+                <button type='button' title='Picture'>
+                    <img src="/posts/pic.png" className="w-[40px] h-[40px] hover:cursor-pointer" alt="emoji" />
+
+                </button>
             </div>
         </div>
     );

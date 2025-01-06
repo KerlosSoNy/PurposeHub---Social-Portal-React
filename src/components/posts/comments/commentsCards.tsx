@@ -11,18 +11,20 @@ interface Comment {
     isLiked: boolean;
     avatarUrl: string;
     replies?: Comment[];
+    badge?: boolean;
 }
-export default function CommentCard({ author, time, content, likes, isLiked, avatarUrl, replies }: Comment) {
+
+export default function CommentCard({ author, time, content, likes, isLiked, avatarUrl, replies, badge }: Comment) {
     return (
         <div>
-            <div className="flex gap-2 p-3 hover:bg-gray-50 rounded-lg transition-colors">
+            <div className="flex gap-2 p-3 hover:bg-[#f5fbfc] rounded-lg transition-colors">
                 <img
                     src={avatarUrl}
                     alt={`${author}'s avatar`}
                     className="w-[40px] h-[40px] rounded-full z-[1000] object-cover"
                 />
                 <div className="flex-1 min-w-0">
-                    <CommentHeader author={author} time={time} />
+                    <CommentHeader author={author} time={time} badge={badge} />
                     <CommentContent content={content} />
                     <CommentActions isLiked={isLiked} likes={likes} />
                 </div>

@@ -16,8 +16,8 @@ export function GroupItem({ name, memberCount, imageUrl, onJoin }: GroupItemProp
                     className="w-10 h-10 rounded-full object-cover"
                 />
                 <div>
-                    <h3 className="text-gray-900 font-medium">{name}</h3>
-                    <p className="text-gray-500 text-sm">{memberCount} Members</p>
+                    <h3 className="text-[#6D6C6C] font-[16px]">{name}</h3>
+                    <p className="text-[#AAAAAA] text-[14px]">{memberCount} Members</p>
                 </div>
             </div>
             <button

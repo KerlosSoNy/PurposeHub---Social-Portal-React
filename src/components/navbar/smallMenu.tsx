@@ -35,7 +35,7 @@ export default function SmallMenu({ setIsOpen, isOpen }: { setIsOpen: React.Disp
     const [active, setActive] = useState<number | null>(1)
 
     return (
-        <div className="rounded-[20px] overflow-hidden flex flex-col gap-5 relative pt-[15px]" ref={menuRef}>
+        <div className="rounded-[20px] scrollbar-hide  overflow-hidden flex flex-col gap-5 relative pt-[15px]" ref={menuRef}>
             <img src="/icons/logo.png" alt="logo" className="nav-logo-body h-[clamp(38px,2.8rem,45px)] mx-auto" />
             <div className="flex flex-col gap-[30px] rounded-[20px] bg-white px-[30px] py-[26px]">
                 {

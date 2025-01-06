@@ -24,7 +24,7 @@ export default function LeaderSelectMenu() {
                 onClick={() => setOpen(!open)}
                 className="flex flex-row items-center gap-[12px]"
             >
-                . {value}
+                {value}
                 <img
                     src="/posts/arrow-circle-right.png"
                     alt="Bell"

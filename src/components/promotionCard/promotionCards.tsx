@@ -11,11 +11,11 @@ export function PromotionCard({ title, description, imageUrl }: PromotionCardPro
             <img
                 src={imageUrl}
                 alt={title}
-                className="w-16 h-16 rounded-lg object-cover"
+                className="w-[clamp(100px,7.5rem,126px)] h-[84px] rounded-lg object-cover"
             />
             <div>
-                <h3 className="text-gray-900 font-medium">{title}</h3>
-                <p className="text-gray-500 text-sm">{description}</p>
+                <h3 className="text-[#474747] text-[16px] font-medium">{title}</h3>
+                <p className="text-[#818181] text-[16px]">{description}</p>
             </div>
         </div>
     );

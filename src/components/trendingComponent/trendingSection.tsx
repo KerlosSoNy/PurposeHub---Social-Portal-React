@@ -56,13 +56,13 @@ export default function TrendingCourses() {
             <div className="space-y-4">
                 {courses.map((course) => (
                     <div key={course.id} className="flex items-center justify-between">
-                        <div className="flex items-center gap-3">
-                            <div className={`w-10 h-10 rounded-full ${course.iconBg} flex items-center justify-center`}>
+                        <div className="flex items-center gap-[10px]">
+                            <div className={`w-[40px] h-[40px] rounded-full ${course.iconBg} flex items-center justify-center`}>
                                 {course.icon}
                             </div>
                             <div>
-                                <h3 className="font-medium text-gray-900">{course.name}</h3>
-                                <p className="text-sm text-gray-500">{course.instructor}</p>
+                                <h3 className="font-medium text-[16px] text-[#6D6C6C]">{course.name}</h3>
+                                <p className="text-[14px] text-[#AAAAAA]">{course.instructor}</p>
                             </div>
                         </div>
                         <button className="px-4  !h-[40px] !w-[100px]  text-[#018AAF] border border-[#018AAF]  rounded-[10px] hover:bg-blue-50 transition-colors">

@@ -14,6 +14,7 @@ interface Comment {
     isLiked: boolean;
     avatarUrl: string;
     replies?: Comment[];
+    badge?: boolean;
 }
 
 export default function CommentList({ comments, showAllComments, setShowAllComments }: CommentListProps) {

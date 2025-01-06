@@ -13,7 +13,7 @@ export function LeaderboardProfile({ rank, imageUrl, username }: LeaderboardProf
         alt={username}
         className="w-14 h-14 rounded-full object-cover"
       />
-      <div className="  rounded-full px-1.5 py-0.5 text-xs font-medium shadow-sm border border-gray-100">
+      <div className="  rounded-full px-1.5 py-0.5 text-xs font-medium mt-[6px]">
         #{rank}
       </div>
     </div>
