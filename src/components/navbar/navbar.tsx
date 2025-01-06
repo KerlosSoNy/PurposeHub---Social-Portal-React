@@ -9,7 +9,7 @@ export default function Navbar() {
         <div className="flex flex-row fixed z-[1000] items-center w-screen nav-body bg-white justify-between">
             <div className="flex flex-row items-center gap-[32px]">
                 <Menu
-                    className="hover:cursor-pointer block lg:hidden"
+                    className="hover:cursor-pointer block xl:hidden"
                     onClick={() => setIsOpen(!isOpen)}
                 />
                 <div

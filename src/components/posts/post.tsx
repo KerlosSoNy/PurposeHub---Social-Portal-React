@@ -44,7 +44,7 @@ export function Post({
             <EngagementStats likes={likes} comments={comments} sponser setShowAllComments={setShowAllComments} showAllComments={showAllComments} />
             {
                 !showAllComments &&
-                <CommentList comments={mockComments} />
+                <CommentList showAllComments={showAllComments} setShowAllComments={setShowAllComments} comments={mockComments} />
             }
             <CommentInput userAvatarUrl={userAvatarUrl} />
         </div>

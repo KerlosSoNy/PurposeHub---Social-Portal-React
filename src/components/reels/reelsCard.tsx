@@ -30,7 +30,7 @@ export default function ReelCard({ username, isVerified, thumbnailUrl, avatarUrl
                     />
                     <span className="text-white text-[18px] font-semibold">{username}</span>
                     {isVerified && (
-                        <CheckCircle2 className="w-[20px] h-[20px] text-blue-500 fill-white" />
+                        <img src="/icons/verified.svg" alt="Verified" className="w-[20px] h-[20px]" />
                     )}
                 </div>
                 <div className="flex gap-[24px]">

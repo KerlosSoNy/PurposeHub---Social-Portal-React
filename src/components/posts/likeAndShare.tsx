@@ -29,7 +29,7 @@ export function EngagementStats({ likes, comments, sponser, hide, showAllComment
                     {sponser &&
                         <div className="flex items-center gap-[8px] bg-[#fff5f5] rounded-full px-2">
                             <img src='/icons/fire.svg' className='w-[24px] h-[24px]' alt='comment' />
-                            <span className='text-[16px] font-semibold text-with-shadow text-[#FF7A00]'>
+                            <span className='text-[16px] font-semibold text-[#FF7A00]'>
                                 Get more likes
                             </span>
                         </div>
