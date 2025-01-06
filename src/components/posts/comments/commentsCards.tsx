@@ -33,7 +33,9 @@ export default function CommentCard({ author, time, content, likes, isLiked, ava
                         <div className='relative'>
                             <CommentCard key={reply.id} {...reply} />
                             <div className='h-[1px] -start-2 top-[35px] bg-[#0000001e] absolute w-[20px]' />
-                            <div className='w-[1px] -start-2 -top-[13.6vh] lg:-top-[74px] bg-[#0000001e] absolute h-[17.8vh] lg:h-[109px]' />
+                            <div className='w-[1px] -start-2 
+                            -top-[19.5vh] sm:-top-[13.6vh] md:-top-[9.8vh] lg:-top-[74px] bg-[#0000001e] absolute 
+                            h-[23.4vh] sm:h-[20vh] md:h-[13vh] lg:h-[109px]' />
                         </div>
                     ))}
                 </div>

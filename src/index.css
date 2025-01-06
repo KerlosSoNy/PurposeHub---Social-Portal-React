@@ -14,10 +14,22 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.active-icon {
+    filter: invert(40%) sepia(80%) saturate(200%) hue-rotate(180deg);
+}
+
+
 .main-body{
     padding-left: clamp(20px,3.13vw,60px);
     padding-right:  clamp(20px,3.13vw,60px);
 }
+
+#progress {
+    position: sticky;
+    top: 0;
+    margin: 0;
+    padding: 0;
+  }
 
 .nav-body{
     height: clamp(50px, 10vh, 70px);

@@ -6,7 +6,7 @@ interface ReelCardProps {
     isVerified: boolean;
     thumbnailUrl: string;
     avatarUrl: string;
-    videoUrl: string; // Add video URL prop
+    videoUrl: string;
 }
 
 export default function ReelCard({ username, isVerified, thumbnailUrl, avatarUrl, videoUrl }: ReelCardProps) {

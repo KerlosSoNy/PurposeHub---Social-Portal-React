@@ -6,6 +6,7 @@ import { PostHeader } from "./postHeader";
 import { PostImage } from "./postImage";
 import CommentList from "./comments/commentsList";
 import { mockComments } from "./comments/constant";
+import { typesOfPosts } from "./constant";
 
 interface PostProps {
     avatarUrl: string;
@@ -17,6 +18,7 @@ interface PostProps {
     likes: number;
     comments: number;
     userAvatarUrl: string;
+    type?: string
 }
 
 export function Post({
@@ -29,10 +31,16 @@ export function Post({
     likes,
     comments,
     userAvatarUrl,
+    type
 }: PostProps) {
     const [showAllComments, setShowAllComments] = useState(true);
     return (
-        <div className="bg-white rounded-[20px] ps-[34px] pe-[35px] py-[24px]  w-full">
+        // @ts-ignore
+        <div className={`${typesOfPosts[`${type}`] ? typesOfPosts[`${type}`].bgColor : 'bg-white'} overflow-hidden relative rounded-[20px] ps-[34px] pe-[35px] py-[24px]  w-full`}>
+            {
+                // @ts-ignore 
+                type && <img src={typesOfPosts[`${type}`] ? typesOfPosts[`${type}`].bgImage : ""} alt="line" className="w-full absolute z-[1]" />
+            }
             <PostHeader
                 avatarUrl={avatarUrl}
                 username={username}
@@ -46,7 +54,8 @@ export function Post({
                 !showAllComments &&
                 <CommentList showAllComments={showAllComments} setShowAllComments={setShowAllComments} comments={mockComments} />
             }
-            <CommentInput userAvatarUrl={userAvatarUrl} />
+            {/* @ts-ignore */}
+            <CommentInput animation={typesOfPosts[`${type}`] ? typesOfPosts[`${type}`].animation : ""} extraIcons={typesOfPosts[`${type}`] ? typesOfPosts[`${type}`].icon : null} userAvatarUrl={userAvatarUrl} />
         </div>
     );
 }

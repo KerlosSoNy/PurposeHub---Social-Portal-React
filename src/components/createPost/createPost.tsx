@@ -51,12 +51,12 @@ export default function CreatePost() {
 
                         </button>
                         {showMenu && (
-                            <div className="absolute top-full -start-2 mt-2 w-[60px] bg-white shadow-lg rounded-lg z-100">
+                            <div className="absolute top-full -start-2 mt-2 w-[60px] bg-white shadow-lg rounded-lg z-10">
                                 <ul className="flex flex-col gap-2 p-2">
-                                    <img src="/posts/player.png" alt="Player" className="w-[40px] h-[40px]" />
-                                    <img src="/posts/hash.png" alt="Hashtag" className="w-[40px] h-[40px]" />
-                                    <img src="/posts/setting.png" alt="Settings" className="w-[40px] h-[40px]" />
-                                    <img src="/posts/badge.png" alt="Badge" className="w-[40px] h-[40px]" />
+                                    <li><img src="/posts/player.png" alt="Player" className="w-[40px] h-[40px]" /></li>
+                                    <li><img src="/posts/hash.png" alt="Hashtag" className="w-[40px] h-[40px]" /></li>
+                                    <li><img src="/posts/setting.png" alt="Settings" className="w-[40px] h-[40px]" /></li>
+                                    <li><img src="/posts/badge.png" alt="Badge" className="w-[40px] h-[40px]" /></li>
                                 </ul>
                             </div>
                         )}

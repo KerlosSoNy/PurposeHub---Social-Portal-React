@@ -5,8 +5,8 @@ import './styles.css'
 export default function SideMenu() {
     const [active, setActive] = useState<number | null>(1)
     return (
-        <div className="fixed shadow-lg hidden lg:flex flex-col gap-[30px] 
-        rounded-[20px] bg-white px-[30px] py-[26px] 
+        <div className="sticky shadow-lg hidden lg:flex flex-col gap-[30px] 
+        rounded-[20px] bg-white h-fit px-[30px] py-[26px] 
         sm:w-[300px] md:w-[300px] lg:w-[300px] xl:w-[207px] minxl:w-[239px] 2xl:w-[287px] 3xl:w-[337px]
         ">
             {

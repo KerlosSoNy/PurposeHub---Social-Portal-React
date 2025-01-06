@@ -25,7 +25,7 @@ export function PostHeader({ avatarUrl, username, timestamp }: PostHeaderProps) 
     }, [menuRef]);
 
     return (
-        <div className="flex items-start justify-between">
+        <div className="flex items-start justify-between relative z-[10]">
             <div className="flex gap-3">
                 <img
                     src={avatarUrl}
@@ -33,7 +33,7 @@ export function PostHeader({ avatarUrl, username, timestamp }: PostHeaderProps) 
                     className="w-12 h-12 rounded-full"
                 />
                 <div>
-                    <div className='flex flex-row gap-[17px]'>
+                    <div className='flex flex-col sm:flex-row gap-[5px] sm:gap-[17px]'>
                         <div className="flex flex-col items-start gap-[1px]">
                             <h2 className="font-bold">{username}</h2>
                             <span className="text-[#AAAAAA] text-[14px]">{timestamp}</span>
@@ -48,7 +48,7 @@ export function PostHeader({ avatarUrl, username, timestamp }: PostHeaderProps) 
                 <span className="text-[#AAAAAA] text-[16px]">
                     23.15k views
                 </span>
-                <button title='More' onClick={() => setIsOpen(!isOpen)} className="text-gray-500 hover:bg-gray-100 rounded-full">
+                <button title='More' onClick={() => setIsOpen(!isOpen)} className="text-gray-500  rounded-full">
                     <EllipsisVertical size={30} color='#C4C4C4' />
                 </button>
                 {

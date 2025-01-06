@@ -9,7 +9,7 @@ export function ScrollButton({ direction, onClick }: ScrollButtonProps) {
     return (
         <button
             onClick={onClick}
-            className={`absolute top-1/2 -translate-y-2/3 bg-white rounded-full shadow-lg p-1.5 hover:bg-gray-50 transition-colors ${direction === 'right' ? '!-end-5' : '!-start-5'} z-10`}
+            className={`absolute top-1/2 -translate-y-1/2 bg-white rounded-full shadow-lg p-1.5 hover:bg-gray-50 transition-colors ${direction === 'right' ? '!-end-5' : '!-start-5'} z-10`}
             style={{ [direction]: '0.5rem' }}
             aria-label={`Scroll ${direction}`}
         >
