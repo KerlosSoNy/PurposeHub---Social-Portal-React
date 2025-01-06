@@ -1,9 +1,9 @@
-import MidComponent from "./components/midComponent/midComponent"
-import Navbar from "./components/navbar/navbar"
-import { RightSideBar } from "./components/rightSide/rightSidebar"
-import SideMenu from "./components/sideMenu/sideMenu"
+import MidComponent from "../../components/midComponent/midComponent"
+import Navbar from "../../components/navbar/navbar"
+import { RightSideBar } from "../../components/rightSide/rightSidebar"
+import SideMenu from "../../components/sideMenu/sideMenu"
 
-function App() {
+export default function Home() {
 
   return (
     <div className="flex flex-col max-w-screen">
@@ -18,5 +18,3 @@ function App() {
     </div>
   )
 }
-
-export default App
