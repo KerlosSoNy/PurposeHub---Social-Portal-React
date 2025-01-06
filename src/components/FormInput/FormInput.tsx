@@ -42,21 +42,21 @@ export default function InputAndLabel({
 
     return (
         <div
-            className={`flex flex-col gap-[clamp(1px,1.5vw,5px)] my-2 relative font-sans text-gray-01 dark:text-white w-full `}
+            className={`flex flex-col gap-[clamp(1px,1.5vw,5px)] my-2 relative font-sans text-black w-full `}
         >
             <div className="flex flex-row ">
                 {label && (<label
                     id={label}
                     htmlFor={label}
-                    className={`mb-[6px] text-gray-01 !font-medium text-[clamp(16px,1.5vw,18px)] flex flex-row items-center dark:text-shadow_blue `}
+                    className={`mb-[8px] text-gray-01 !font-medium text-[clamp(16px,1.5vw,18px)] flex flex-row items-center dark:text-shadow_blue `}
                 >
-                    {label && <span className="ms-[10px]">{label}</span>}
+                    {label && <span className="ms-[1px] text-[16px]">{label}</span>}
                     <div className="">:</div>
                     {isRequired && <span className="text-errorState block ms-1">*</span>}
                 </label>)}
 
             </div>
-            <div className={`relative h-[50px] z-[10] rounded-[12px] bg-white overflow-hidden w-[100%] flex flex-row border-[1px] ${error ? "border-errorState" : "border-[#C8C8C8]"} `}>
+            <div className={`relative h-[48px] z-[10] rounded-[8px] bg-white overflow-hidden w-[100%] flex flex-row shadow-lg border-[1px] ${error ? "border-[#E11A0B]" : "border-[#018AAF]"} `}>
                 <input
                     placeholder={placeholder}
                     id={label}
@@ -72,12 +72,12 @@ export default function InputAndLabel({
                     <button
                         type="button"
                         onClick={handleVisible}
-                        className={`border-s-[1px] border-[#C8C8C8] bg-white flex flex-col items-center justify-center w-[15%]`}
+                        className={`bg-white flex flex-col items-center justify-center w-[15%]`}
                     >
                         {visible ? (
-                            <img src="/icons/closedEye.svg" alt="eye" className="w-[20px] h-[20px]" />
+                            <img src="/icons/password-eye.svg" alt="eye" className="w-[24px] h-[24px]" />
                         ) : (
-                            <img src="/icons/closedEye.svg" alt="eye" className="w-[20px] h-[20px]" />
+                            <img src="/icons/password-eye.svg" alt="eye" className="w-[24px] h-[24px]" />
                         )}
                     </button>
                 )}
@@ -102,7 +102,7 @@ export default function InputAndLabel({
                     </span>
                 )}
             </div>
-            {error && <span className="ps-3 text-[14px]  font-semibold text-errorState">{error}</span>}
+            {error && <span className="ps-3 text-[14px]  font-semibold text-[#E11A0B]">{error}</span>}
         </div>
     );
 }

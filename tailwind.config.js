@@ -20,5 +20,8 @@ export default {
       }
     }
   },
+  width:{
+    "inputForms":'clamp(303px,50vw,650px)'
+  },
   plugins: [require('tailwind-scrollbar-hide')],
 }
