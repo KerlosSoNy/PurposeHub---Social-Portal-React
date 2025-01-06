@@ -8,14 +8,14 @@ import Toast from "../../components/toasts/toast";
 export default function ChangePassword() {
     const { data, handleChange, error, handleSubmit, setShowErrorToast, setShowSuccessToast, showErrorToast, showSuccessToast, title, body } = useChangePassword();
     return (
-        <div className="!bg-white w-screen  flex flex-row justify-center p-[20px] sm:p-[32px]">
-            <div className="w-[626px] lg:w-[676px] hidden xl:flex flex-col items-center justify-center rounded-[20px] 2xl:w-[727px] gap-[32px] xl:h-[92.5vh] minxl:h-[92.5vh] 3xl:h-[93.5vh]  relative bg-gradient-to-b from-[#018AAF] to-[#46BADA]">
+        <div className="!bg-white w-screen h-full flex flex-row justify-center p-[20px] sm:p-[32px]">
+            <div className="w-[626px] lg:w-[676px] hidden xl:flex flex-col items-center justify-center rounded-[20px] xl:w-[676px] 2xl:w-[727px] gap-[32px] xl:h-[92.5vh] minxl:h-[92.5vh] 3xl:h-[93.5vh]  relative bg-gradient-to-b from-[#018AAF] to-[#46BADA]">
                 <img alt="background" className="w-[100%] h-[63%] opacity-25 absolute top-0 left-0" src="/signIn/signIn-Bg.png" />
                 <Carousel images={images} />
             </div>
             <div className={`flex flex-col items-center justify-evenly xl:justify-between  w-full 
-            h-[95.5vh]  md:h-[94vh] lg:h-[92vh] lg:w-[calc(100%-626px)] 
-            ${error?.password || error?.confirm_password ? "pt-[10px] sm:pt-[10px] xl:pt-[7px] 3xl:pt-[107px]" : "pt-[20px] sm:pt-[50px] xl:pt-[90px] 3xl:pt-[157px]"} `}>
+            h-[95.5vh]  md:h-[94vh] lg:h-[92vh] lg:w-[calc(100%-676px)] 
+            ${error?.password || error?.confirm_password ? "pt-[10px] sm:pt-[37px] xl:pt-[87px] 3xl:pt-[137px]" : "pt-[20px] sm:pt-[50px] xl:pt-[90px] 3xl:pt-[157px]"} `}>
                 <div className="flex flex-col justify-center max-w-[434px] over items-start bg-white">
 
                     <div className="flex flex-col justify-start mb-[15px] 3xl:mb-[24px]">
