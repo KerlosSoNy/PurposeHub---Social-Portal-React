@@ -7,5 +7,6 @@ export interface CarouselImage {
   
   export interface CarouselProps {
     images: CarouselImage[];
+    classes?: string;
     autoPlayInterval?: number;
   }

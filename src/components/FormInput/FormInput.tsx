@@ -56,7 +56,7 @@ export default function InputAndLabel({
                 </label>)}
 
             </div>
-            <div className={`relative h-[48px] z-[10] rounded-[8px] bg-white overflow-hidden w-[100%] flex flex-row shadow-lg border-[1px] ${error ? "border-[#E11A0B]" : "border-[#018AAF]"} `}>
+            <div className={`relative h-[48px] rounded-[8px] bg-white overflow-hidden w-[100%] flex flex-row shadow-lg border-[1px] ${error ? "border-[#E11A0B]" : "border-[#018AAF]"} `}>
                 <input
                     placeholder={placeholder}
                     id={label}
@@ -66,7 +66,7 @@ export default function InputAndLabel({
                     onChange={onChange}
                     className={`${icon ? "ps-14" : ""
                         } text-[#333] bg-white outline-none  mb-1 focus:outline-none
-                            h-12 p-3 rounded-lg w-[85%] px-6 py-3 text-base font-normal bg-inherit `}
+                            h-12 p-3 rounded-lg ${isChecked || error || see ? "w-[85%]" : "w-[100%]"} px-6 py-3 pb-4 text-base font-normal bg-inherit `}
                 />
                 {see && (
                     <button

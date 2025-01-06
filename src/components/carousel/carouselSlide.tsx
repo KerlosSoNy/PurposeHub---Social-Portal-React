@@ -8,7 +8,7 @@ interface CarouselSlideProps {
 export function CarouselSlide({ image, index }: CarouselSlideProps) {
     return (
         <div
-            className="absolute flex  flex-col justify-center items-center top-0 left-0 w-full h-[calc(100vh-64px)]"
+            className="absolute flex  flex-col justify-center items-center left-0 w-full "
             style={{ transform: `translateX(${index * 100}%)` }}
         >
             <img

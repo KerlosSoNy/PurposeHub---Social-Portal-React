@@ -3,6 +3,7 @@ import Home from "../../pages/homePage/home";
 import SignIn from "../../pages/signIn/signIn";
 import ForgetPassword from "../../pages/forget-password/forgetPassword";
 import ChangePassword from "../../pages/change-password/changePassword";
+import SignUp from "../../pages/signUp/signUp";
 
 
 export const routes = createBrowserRouter([
@@ -21,5 +22,9 @@ export const routes = createBrowserRouter([
     {
         path: "/change-password",
         element: <ChangePassword />
+    },
+    {
+        path: "/sign-up",
+        element: <SignUp />
     }
 ])

@@ -12,7 +12,7 @@ interface Toasts {
 
 export default function Toast({ showErrorToast, setShowErrorToast, showSuccessToast, setShowSuccessToast, title, body }: Toasts) {
     return (
-        <div className='z-[100000] fixed w-[100%] top-0'>
+        <div className='z-[100000] bg-white fixed w-[100%] top-0'>
             {showErrorToast && (
                 <ErrorToast
                     title={title}
