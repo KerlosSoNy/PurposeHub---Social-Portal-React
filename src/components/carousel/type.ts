@@ -1,7 +1,9 @@
 export interface CarouselImage {
     url: string;
     alt: string;
+    extraUrl?:string;
     title?: string;
+    signUp?:boolean;
     description?: string;
   }
   

@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react"
+import { useCallback, useMemo, useState } from "react"
 import * as yup from "yup";
 import { useNavigate } from "react-router";
 import { signUpValidation } from "../validation/signupValidation";
@@ -73,11 +73,28 @@ export function useSignUp() {
 
     let strength = getPasswordStrength(data?.password);
 
-    const requirements = [
-        { message: 'At least 8 characters', valid: !errors.some((e: any) => e.message.includes('8 characters')) },
-        { message: 'Contains a number or symbol', valid: !errors.some((e: any) => e.message.includes('number or symbol')) },
-        { message: 'Cannot contain personal info', valid: !errors.some((e: any) => e.message.includes('personal info')) }
-    ];
+    const requirements = useMemo(() => {
+        const normalizedFullName = data.full_name.trim().toLowerCase();
+        const normalizedEmail = data.email.trim().toLowerCase();
+        const normalizedPassword = data.password.trim().toLowerCase();
+
+        const nameParts = normalizedFullName.split(/\s+/);
+        return [
+            {
+                message: 'Cannot contain your name or email address',
+                valid: !nameParts.some(part => part && normalizedPassword.includes(part)) &&
+                    !normalizedPassword.includes(normalizedEmail.split('@')[0]),
+            },
+            {
+                message: 'At least 8 characters',
+                valid: data.password.length >= 8,
+            },
+            {
+                message: 'Contains a number and symbol',
+                valid: /[0-9]/.test(data.password) && /[!@#$%^&*(),.?":{}|<>]/.test(data.password),
+            },
+        ]
+    }, [data]);
 
     const handleSubmit = async () => {
         setError({

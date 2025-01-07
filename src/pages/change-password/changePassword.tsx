@@ -1,22 +1,19 @@
 import { Link } from "react-router";
-import { Carousel } from "../../components/carousel/carouselComponent";
 import InputAndLabel from "../../components/FormInput/FormInput";
-import { images } from "../../utils/fakeData/constant";
+import { imagesPasswords } from "../../utils/fakeData/constant";
 import { useChangePassword } from "./hooks/useChangePassword";
 import Toast from "../../components/toasts/toast";
+import MainCarousel from "../../components/carousel/mainCarousel";
 
 export default function ChangePassword() {
     const { data, handleChange, error, handleSubmit, setShowErrorToast, setShowSuccessToast, showErrorToast, showSuccessToast, title, body } = useChangePassword();
     return (
-        <div className="!bg-white h-full flex flex-row justify-center p-[20px] sm:p-[32px]">
-            <div className="w-[626px] lg:w-[676px] hidden xl:flex flex-col items-center justify-center rounded-[20px] 2xl:w-[727px] gap-[32px]  relative bg-gradient-to-b from-[#018AAF] to-[#46BADA]">
-                <img alt="background" className="w-[100%] h-[63%] opacity-25 absolute top-0 left-0" src="/signIn/signIn-Bg.png" />
-                <Carousel images={images} />
-            </div>
+        <div className="!bg-white font-inter min-h-screen flex flex-row justify-center p-[20px] sm:p-[32px]">
+            <MainCarousel images={imagesPasswords} />
             <div className={`flex flex-col items-center justify-evenly xl:justify-between  w-full 
             lg:w-[calc(100%-626px)] 
-            ${error?.password ? "pt-[10px] sm:pt-[47px] xl:pt-[97px] 3xl:pt-[147px]" : "pt-[20px] sm:pt-[50px] xl:pt-[90px] 3xl:pt-[157px]"} gap-[50px]`}>
-                <div className="flex flex-col justify-center max-w-[434px] over items-start bg-white">
+            ${error?.password ? "pt-[10px] sm:pt-[47px] xl:pt-[97px] 3xl:pt-[147px]" : "pt-[20px] sm:pt-[50px] xl:pt-[172px] "} gap-[50px]`}>
+                <div className="flex flex-col justify-center max-w-[434px] items-start bg-white">
 
                     <div className="flex flex-col justify-start mb-[15px] 3xl:mb-[24px]">
                         <img src="/icons/logo.png" alt="logo" className="w-[70px] h-[59px]" />
@@ -55,10 +52,10 @@ export default function ChangePassword() {
                     </button>
                     <span className="text-center w-full mt-[24px] text-[#475467]">
                         Already have an account?
-                        <Link to='/sign-up' className="text-[#018AAF] font-semibold ms-1">Sign up</Link>
+                        <Link to='/' className="text-[#018AAF] font-semibold ms-1">Sign in</Link>
                     </span>
                 </div>
-                <div className="flex flex-col text-center bg-white pb-3">
+                <div className="flex flex-col text-center bg-white mt-[10px] pb-3">
                     <span className="text-[#9C9AA5] text-[14px]">By signing up to create an account I accept Company</span>
                     <Link to='/' className="text-[#26203B] text-[14px] ms-1">Terms of use & Privacy Policy.</Link>
                 </div>

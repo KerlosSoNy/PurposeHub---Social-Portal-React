@@ -17,7 +17,10 @@ export default {
         "minxl": '1440px',
         '2xl': '1536px',
         '3xl': '1920px',
-      }
+      },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+      },
     }
   },
   width:{

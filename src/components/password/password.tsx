@@ -8,7 +8,7 @@ interface PasswordStrengthProps {
 export function PasswordStrength({ strength, getStrengthColor }: PasswordStrengthProps) {
     console.log(getStrengthColor(strength))
     return (
-        <div className="flex flex-row gap-2 mt-[34px]">
+        <div className="flex flex-row gap-2 mt-[24px] 2xl:mt-[32px]">
             {getStrengthColor(strength) === "strong" ? (
                 <Check size={16} className="text-green-500 mt-1" />
             ) : (

@@ -66,15 +66,16 @@ const CustomSelectMenu: FC<CustomSelectMenuProps> = ({
     const customStyles: StylesConfig<OptionType, boolean> = {
         control: (provided, state) => ({
             ...provided,
+            paddingLeft: "6px",
             height: "48px",
             borderRadius: "0.5rem",
             borderColor: error
                 ? "red"
                 : state.isFocused
                     ? "blue"
-                    : provided.borderColor,
+                    : '#018AAF',
             borderWidth: error ? "1px" : "1px",
-            boxShadow: state.isFocused ? "0 0 0 1px blue" : "0 0 0 1px #018AAF",
+            boxShadow: '0px 8px 8px rgba(0, 0, 0, 0.05)',
             "&:hover": {
                 borderColor: error ? "red" : "blue",
             },
@@ -94,13 +95,14 @@ const CustomSelectMenu: FC<CustomSelectMenuProps> = ({
     };
     return (
         <div
+            className={`mt-1`}
             style={{
                 width: `${width}`,
                 height: `${higth}`,
             }}
         >
             {label ? (
-                <h1 className={`text-[16px] font-[500] text-[#26203B] mb-[8px]`}>
+                <h1 className={`text-[16px] font-[400] text-[#26203B] mb-[11px]`}>
                     {label}
                 </h1>
             ) : null}

@@ -25,6 +25,21 @@ html {
     overflow: hidden;
 }
 
+input[type="date"]::-webkit-input-placeholder {
+    color: #9C9AA5!important;
+  }
+  
+  input[type="date"]:-ms-input-placeholder {
+    color: #9C9AA5!important;
+  }
+  
+  .element::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+  input[type="date"]::-ms-input-placeholder {
+    color: #9C9AA5!important;
+  }
+
 #progress {
     position: sticky;
     top: 0;

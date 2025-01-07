@@ -42,7 +42,7 @@ export default function InputAndLabel({
 
     return (
         <div
-            className={`flex flex-col gap-[clamp(1px,1.5vw,5px)] my-2 relative font-sans text-black w-full `}
+            className={`flex flex-col font-inter gap-[clamp(1px,1.5vw,5px)] my-2 relative text-black w-full `}
         >
             <div className="flex flex-row ">
                 {label && (<label
@@ -50,8 +50,7 @@ export default function InputAndLabel({
                     htmlFor={label}
                     className={`mb-[8px] text-gray-01 !font-medium text-[clamp(16px,1.5vw,18px)] flex flex-row items-center dark:text-shadow_blue `}
                 >
-                    {label && <span className="ms-[1px] text-[16px]">{label}</span>}
-                    <div className="">:</div>
+                    {label && <span className="ms-[1px] text-[16px] font-[400]">{label}</span>}
                     {isRequired && <span className="text-errorState block ms-1">*</span>}
                 </label>)}
 
@@ -65,8 +64,8 @@ export default function InputAndLabel({
                     min={type === "number" ? 1 : undefined}
                     onChange={onChange}
                     className={`${icon ? "ps-14" : ""
-                        } text-[#333] bg-white outline-none  mb-1 focus:outline-none
-                            h-12 p-3 rounded-lg ${isChecked || error || see ? "w-[85%]" : "w-[100%]"} px-6 py-3 pb-4 text-base font-normal bg-inherit `}
+                        } text-[#9C9AA5] bg-white outline-none  mb-1 focus:outline-none
+                            h-12 p-3 rounded-lg ${isChecked || error || see ? "w-[85%]" : "w-[100%]"} px-[16px] py-3 placeholder:text-[#9C9AA5] pb-4 text-base font-normal bg-inherit `}
                 />
                 {see && (
                     <button
