@@ -107,7 +107,7 @@ export function useSignUp() {
         try {
             await signUpValidation.validate(data, { abortEarly: false });
             setTimeout(() => {
-                navigate('/home')
+                navigate('/complete-profile')
             }, 4000)
             setTitle("Sign up successfully")
             setBody("Welcome")

@@ -89,7 +89,7 @@ export default function SignUp() {
 
                         <PasswordRequirements requirements={requirements} />
                     </div>
-                    <button title="Login" type="button" onClick={handleSubmit} className=" w-full z-[2] h-[50px] bg-[#018AAF] text-white py-2 rounded-xl mb-[15px] mt-[32px] 3xl:mb-[24px]">
+                    <button title="Sign Up" type="button" onClick={handleSubmit} className=" w-full z-[2] h-[50px] bg-[#018AAF] text-white py-2 rounded-xl mb-[15px] mt-[32px] 3xl:mb-[24px]">
                         Sign Up
                     </button>
                     <OrComponent />
