@@ -22,7 +22,7 @@ export default function SignUp() {
             <Circles />
             <div className={`flex flex-col h-[130vh] element overflow-y-auto items-center xl:justify-between w-full 
                 lg:w-[calc(100%-626px)] 
-                pt-[20px] justify-between gap-[32px`}>
+                pt-[20px] justify-between gap-[32px]`}>
                 <div className="flex flex-col relative justify-center items-start bg-white">
                     <div className="flex flex-col items-center xl:items-start justify-start mb-[15px] 3xl:mb-[24px] w-full">
                         <img src="/icons/logo.png" alt="logo" className="w-[70px] h-[59px]" />
