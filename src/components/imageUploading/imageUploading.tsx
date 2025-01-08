@@ -95,7 +95,7 @@ export function ImageUpload({ coverImage, setCoverImage }: {
                     <img // @ts-ignore
                         src={coverImage instanceof File ? URL.createObjectURL(coverImage) : image}
                         alt="Preview"
-                        className='max-h-[169px] w-full object-fill'
+                        className='max-h-[169px] w-full object-cover'
                     />}
             </div>
         </div>

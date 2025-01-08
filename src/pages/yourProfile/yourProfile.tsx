@@ -6,6 +6,8 @@ import StepFour from "./steps/stepFour";
 import StepFive from "./steps/stepFive";
 import Toast from "../../components/toasts/toast";
 import { useToast } from "./hook/useToast";
+import { ProgressBar } from "../../components/progressBar/progressBar";
+import { whatWillBeShowen } from "./function/checkSteps";
 
 export default function YourProfile() {
     const [steps, setSteps] = useState(1);
@@ -18,9 +20,13 @@ export default function YourProfile() {
     const [bio, setBio] = useState("")
     const { setShowErrorToast, setShowSuccessToast, setTitle, title, setBody, body, showSuccessToast, showErrorToast
     } = useToast()
+
     return (
         <div className="bg-[#f5f6fa] font-inter mix-w-screen overflow-x-hidden pt-[32px] pb-[106px] flex flex-col">
             <img src="/icons/logo.png" alt="Logo" className="w-[53px] h-[45px] ms-[22px] xl:ms-[60px]" />
+            <div className='px-[20px] md:px-[50px] xl:px-[210px] mt-[45px] flex flex-col gap-[32px]'>
+                <ProgressBar text={whatWillBeShowen(steps) && whatWillBeShowen(steps).text} progress={whatWillBeShowen(steps) && whatWillBeShowen(steps).steps} />
+            </div>
             {
                 steps === 1 && <StepOne setTitle={setTitle} setBody={setBody} setShowErrorToast={setShowErrorToast} setBio={setBio} bio={bio} coverImage={coverImage} setCoverImage={setCoverImage} profileImage={profileImage} setProfileImage={setProfileImage} setStep={setSteps} step={steps} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
             }
@@ -41,4 +47,6 @@ export default function YourProfile() {
         </div>
     )
 }
+
+
 

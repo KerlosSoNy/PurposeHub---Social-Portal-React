@@ -68,7 +68,7 @@ export default function TraineCategorySelector({
     return (
         <div className="w-full">
             <div className="flex items-center flex-wrap justify-between mb-4">
-                <h2 className="text-[16px] font-medium text-gray-700">
+                <h2 className="text-[16px] font-semibold text-gray-700">
                     Follow Top Trainers
                     <span className="font-[400] ms-1">(minimum 3)</span>
                 </h2>
@@ -90,7 +90,7 @@ export default function TraineCategorySelector({
                             onClick={() => handleCategoryClick(card)}
                             className={`flex-1 px-[18px] py-[20px] rounded-[7px] min-w-[234px] cursor-pointer transition-all duration-200
                                 border ${selectedCategories.includes(card)
-                                    ? "border-[#008AAB] shadow-lg bg-[#ebf2f7]"
+                                    ? "border-[#008AAB] bg-[#ebf2f7]"
                                     : "border-[#979797] hover:border-[#008AAB] bg-white hover:shadow-md"
                                 }
                             `}
@@ -105,7 +105,7 @@ export default function TraineCategorySelector({
                                 </svg>
                                 <span className="pt-[3px]">{card?.expertise}</span>
                             </p>
-                            <p className="text-[#232738] text-[14px] flex flex-row items-center gap-[4px] font-[400] mb-[8px]">
+                            <p className="text-[#232738] text-[14px] flex flex-row items-center gap-[4px] font-[400] mb-[10px]">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8.00033 7.99967C9.84127 7.99967 11.3337 6.50729 11.3337 4.66634C11.3337 2.82539 9.84127 1.33301 8.00033 1.33301C6.15938 1.33301 4.66699 2.82539 4.66699 4.66634C4.66699 6.50729 6.15938 7.99967 8.00033 7.99967Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                     <path d="M13.7268 14.6667C13.7268 12.0867 11.1601 10 8.0001 10C4.8401 10 2.27344 12.0867 2.27344 14.6667" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -113,7 +113,7 @@ export default function TraineCategorySelector({
                                 <span className="pt-[3px]">{card?.followers} Followers</span>
                             </p>
                             <button
-                                className={`mt-4 px-4 py-2 border-[1px] border-[#018AAF] rounded-[12px] ${selectedCategories.includes(card) ? 'text-[#018AAF] ' : ' text-[#018AAF]'
+                                className={`px-4 py-2 border-[1px] border-[#018AAF] rounded-[12px] ${selectedCategories.includes(card) ? 'text-[#018AAF] ' : ' text-[#018AAF]'
                                     }`}
                             >
                                 {selectedCategories.includes(card) ? 'Followed' : 'Follow'}
@@ -127,9 +127,9 @@ export default function TraineCategorySelector({
                         type="button"
                         title="Previous"
                         onClick={prevSlide}
-                        className="absolute -left-2 md:-left-10 xl:-left-16 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50"
+                        className="absolute -left-2 md:-left-10 xl:-left-16 top-1/2 -translate-y-1/2 bg-white border-[1px] border-[#018AAF] rounded-full p-2 hover:bg-gray-50"
                     >
-                        <ChevronLeft className="w-5 h-5 text-gray-600" />
+                        <ChevronLeft className="w-5 h-5 text-[#018AAF]" />
                     </button>
                 )}
 
@@ -138,9 +138,9 @@ export default function TraineCategorySelector({
                         type="button"
                         title="Next"
                         onClick={nextSlide}
-                        className="absolute -right-2 md:-right-10 xl:-right-16 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50"
+                        className="absolute -right-2 md:-right-10 xl:-right-16 top-1/2 -translate-y-1/2 bg-white border-[1px] border-[#018AAF] rounded-full p-2 hover:bg-gray-50"
                     >
-                        <ChevronRight className="w-5 h-5 text-gray-600" />
+                        <ChevronRight className="w-5 h-5 text-[#018AAF]" />
                     </button>
                 )}
             </div>

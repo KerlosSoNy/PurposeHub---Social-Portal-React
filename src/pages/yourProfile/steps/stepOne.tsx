@@ -1,10 +1,8 @@
 import { BioInput } from "../../../components/bioInput/bioInput";
 import CategorySelector from "../../../components/categoriesCarousel/categoriesCarousel";
 import { ImageUpload } from "../../../components/imageUploading/imageUploading";
-import { ProgressBar } from "../../../components/progressBar/progressBar";
 import WaveAvatar from "../../../components/waveAvatar/waveAvatar";
 import { completeProfileValidation } from "../validation.tsx/completeProfile";
-import * as Yup from 'yup';
 interface StepOne {
     setSelectedCategory?: any
     selectedCategory?: any
@@ -25,7 +23,7 @@ export default function StepOne({ bio, setBio, setShowErrorToast, setTitle, setB
     const nextStep = async () => {
         try {
             await completeProfileValidation.validate({ cover: coverImage, profile: profileImage, bio: bio }, { abortEarly: false })
-            if (selectedCategory.length > 3) {
+            if (selectedCategory.length >= 3) {
                 setStep(step + 1)
             } else {
                 setShowErrorToast(true)
@@ -41,7 +39,6 @@ export default function StepOne({ bio, setBio, setShowErrorToast, setTitle, setB
     }
     return (
         <div className='px-[20px] md:px-[50px] xl:px-[210px] mt-[45px] flex flex-col gap-[32px]'>
-            <ProgressBar progress={0} text="Complete your profile" />
             <div className="flex flex-col gap-[32px]">
                 <ImageUpload coverImage={coverImage} setCoverImage={setCoverImage} />
                 <div className="-mt-[90px]">

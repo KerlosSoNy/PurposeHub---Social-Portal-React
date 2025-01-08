@@ -4,7 +4,7 @@ export default function ExpertCards({ card, index }: any) {
         <div
             key={index}
             className={`flex-1 px-[18px] py-[20px]  rounded-[7px] min-w-[234px] cursor-pointer transition-all duration-200
-        border border-[#008AAB] shadow-lg bg-[#ebf2f7]
+        border border-[#008AAB] bg-[#ebf2f7]
         `}
         >
             <img src={card?.avatar} alt={card?.name} className="w-16 h-16 rounded-full mb-[16px]" />

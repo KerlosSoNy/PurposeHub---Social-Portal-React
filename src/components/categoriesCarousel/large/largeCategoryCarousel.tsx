@@ -96,7 +96,7 @@ export default function LargeCategorySelector({
                             onClick={() => handleCategoryClick(card)}
                             className={`flex-1 px-[18px] py-[20px] rounded-[16px] cursor-pointer transition-all duration-200
                                 border ${selectedCategories?.includes(card)
-                                    ? "border-[#008AAB] shadow-lg bg-[#ebf2f7]"
+                                    ? "border-[#008AAB] bg-[#ebf2f7]"
                                     : "border-[#979797] hover:border-[#008AAB] hover:shadow-md bg-white"
                                 }
                             `}
@@ -109,7 +109,7 @@ export default function LargeCategorySelector({
                             <div className="mt-[22px]">
                                 <div className="flex flex-row flex-wrap md:flex-nowrap justify-between items-start">
                                     <div>
-                                        <h2 className="text-lg font-bold text-black">
+                                        <h2 className="text-[16px] text-black">
                                             {card.title}
                                         </h2>
                                         <p className="text-sm text-black">
@@ -145,9 +145,9 @@ export default function LargeCategorySelector({
                         type="button"
                         title="Previous"
                         onClick={prevSlide}
-                        className="absolute -left-2 md:-left-10 xl:-left-16 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50"
+                        className="absolute -left-2 md:-left-10 xl:-left-16 top-1/2 -translate-y-1/2 bg-white border-[1px] border-[#018AAF] rounded-full p-2 hover:bg-gray-50"
                     >
-                        <ChevronLeft className="w-5 h-5 text-gray-600" />
+                        <ChevronLeft className="w-5 h-5 text-[#008AAB]" />
                     </button>
                 )}
 
@@ -156,9 +156,9 @@ export default function LargeCategorySelector({
                         type="button"
                         title="Next"
                         onClick={nextSlide}
-                        className="absolute -right-2 md:-right-10 xl:-right-16 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50"
+                        className="absolute -right-2 md:-right-10 xl:-right-16 top-1/2 -translate-y-1/2 bg-white border-[1px] border-[#018AAF] rounded-full p-2 hover:bg-gray-50"
                     >
-                        <ChevronRight className="w-5 h-5 text-gray-600" />
+                        <ChevronRight className="w-5 h-5 text-[#008AAB]" />
                     </button>
                 )}
             </div>

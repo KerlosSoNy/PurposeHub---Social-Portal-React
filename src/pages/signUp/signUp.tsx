@@ -17,11 +17,11 @@ export default function SignUp() {
         showErrorToast, setData,
         showSuccessToast, title, body, checked } = useSignUp();
     return (
-        <div className="!bg-white font-inter relative min-h-screen overflow-x-hidden  flex flex-row justify-center p-[20px] sm:p-[32px]">
+        <div className="!bg-white font-inter relative max-h-screen overflow-hidden flex flex-row justify-center p-[20px] sm:p-[32px]">
             <MainCarousel images={imagesSignUp} />
             <Circles />
-            <div className={`flex flex-col h-[130vh] element overflow-y-auto items-center xl:justify-between w-full 
-                lg:w-[calc(100%-626px)] 
+            <div className={`flex flex-col max-h-screen xl:max-h-[calc(100vh-64px] items-center xl:justify-between w-full 
+                xl:w-[calc(100%-626px)] overflow-y-scroll 
                 pt-[20px] justify-between gap-[32px]`}>
                 <div className="flex flex-col relative justify-center items-start bg-white">
                     <div className="flex flex-col items-center xl:items-start justify-start mb-[15px] 3xl:mb-[24px] w-full">

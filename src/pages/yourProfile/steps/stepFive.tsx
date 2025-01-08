@@ -1,5 +1,3 @@
-import React from 'react'
-import { ProgressBar } from '../../../components/progressBar/progressBar';
 import { ImageUpload } from '../../../components/imageUploading/imageUploading';
 import WaveAvatar from '../../../components/waveAvatar/waveAvatar';
 import { useNavigate } from 'react-router';
@@ -20,44 +18,18 @@ interface stepFive {
 export default function StepFive({ step, setStep, bio, selectedExpert, selectedTrainers, coverImage, profileImage, selectedCategory, selectedCourse }: stepFive) {
     const navigate = useNavigate()
     return (
-        <div className='px-[20px] font-inter md:px-[50px] xl:px-[210px] mt-[45px] flex flex-col gap-[32px]'>
-            <ProgressBar progress={100} text={
-                <span className='flex flex-row items-center gap-[17px]'>
-                    <span className='pt-1'>You're All Set</span>
-                    <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 29L4.29998 27.5L1.05 26L0 29Z" fill="#F7B600" />
-                        <path d="M12.4504 16.7015L6.40039 10.6016L5.40039 13.4015L12.4504 16.7015Z" fill="#FFDD7D" />
-                        <path d="M5.40078 13.4004L4.30078 16.5504L17.7007 22.8003L18.3507 22.6003L12.4507 16.7004L5.40078 13.4004Z" fill="#F7B600" />
-                        <path d="M3.25 19.7008L13.25 24.3507L17.6999 22.8008L4.3 16.5508L3.25 19.7008Z" fill="#FFDD7D" />
-                        <path d="M2.15039 22.8492L8.75036 25.9492L13.2503 24.3492L3.25039 19.6992L2.15039 22.8492Z" fill="#F7B600" />
-                        <path d="M2.15078 22.8496L1.05078 25.9996L4.30077 27.4996L8.75075 25.9496L2.15078 22.8496Z" fill="#FFDD7D" />
-                        <path d="M14.949 14.0999C18.299 17.3999 20.049 21.0999 18.849 22.2999C17.599 23.4999 13.899 21.7999 10.499 18.4499C7.14904 15.1499 5.39904 11.4499 6.59904 10.2499C7.84903 9.04992 11.549 10.7999 14.949 14.0999Z" fill="#493816" />
-                        <path d="M10.7505 5.74999C9.95051 4.6 10.8005 4.1 11.9005 4.3C10.8505 3.05 11.5005 2.15001 13.1505 2.50001C13.6505 2.6 12.9505 3.45 12.5005 3.45C13.8505 4.45 13.1005 5.54999 11.6505 5.29999C12.9505 7.04998 10.7505 6.59999 9.75051 6.69999C9.50051 7.99998 11.0005 9.49997 10.5005 9.49997C9.40051 9.49997 7.60052 5.34999 10.7505 5.74999Z" fill="#42ADE2" />
-                        <path d="M21.2492 8.15077C20.4992 8.50077 18.3992 5.20079 20.9992 5.15079C19.4992 3.80079 19.6992 3.15079 21.6992 3.1008C19.3992 0.800806 23.0492 0.000809133 23.3992 1.2008C23.4992 1.5508 22.2992 0.900805 21.8992 1.5508C21.4492 2.3008 24.6992 4.25079 21.3492 4.10079C22.5992 5.35078 22.6492 5.95078 20.6992 6.15078C20.9492 6.55078 21.7492 7.95077 21.2492 8.15077Z" fill="#FF8736" />
-                        <path d="M22.0996 15.9508L22.8496 15.3008C22.8496 15.3008 23.5496 16.3508 24.0496 16.7508C24.4496 14.9508 24.3496 13.9008 26.3996 15.1008C25.2496 12.0008 27.1496 13.1508 28.9996 14.0008C28.8996 13.2008 28.9996 13.3008 29.7996 13.0508C30.4996 15.7008 28.5996 14.9008 27.0996 14.0508C27.9996 16.4508 27.0496 16.3008 25.1496 15.5008C25.0996 16.5008 24.7996 17.6508 24.1996 17.7508C23.4996 17.9508 22.0996 15.9508 22.0996 15.9508Z" fill="#ED4C5C" />
-                        <path d="M16.4996 8.54996C15.5996 9.74996 14.1496 10.4 13.0996 11.4499C11.9996 12.5499 11.3496 15.5499 11.3496 15.5499C11.3496 15.5499 11.7496 12.3999 12.7996 11.1999C13.7496 10.1 15.1496 9.29996 15.8996 8.04996C17.1996 5.74997 15.9996 2.74999 14.2996 0.999995C14.6496 0.699997 15.1496 0.299999 15.3996 0C17.0496 2.04999 18.4496 5.99997 16.4996 8.54996Z" fill="#C28FEF" />
-                        <path d="M18.0508 11.099C16.7508 12.049 15.8008 13.449 14.9008 14.749C14.1008 15.899 11.5508 17.349 11.5508 17.349C11.5508 17.349 13.9508 15.699 14.7008 14.499C15.6008 12.999 16.5008 11.449 17.9008 10.349C20.7007 8.19904 24.7507 8.39904 27.9007 9.54903C27.7007 9.99903 27.3507 10.949 27.3507 10.949C27.3507 10.949 20.7007 9.14903 18.0508 11.099Z" fill="#FF8736" />
-                        <path d="M23.6004 10.85C22.7504 11.95 22.3504 13.3 21.7004 14.55C21.1004 15.7 20.3004 16.8 19.1504 17.4C17.8504 18.05 15.0004 17.85 15.0004 17.85C15.0004 17.85 17.8504 17.8 19.0504 17C20.2504 16.2 20.9004 14.8 21.3504 13.5C22.2504 11 23.3504 8.30003 25.9504 7.20003C26.1004 7.65003 26.4504 8.60003 26.4504 8.60003C26.4504 8.60003 25.0004 9.00003 23.6004 10.85ZM0.605469 5.66254L2.01946 4.24805L3.43396 5.66204L2.01996 7.07703L0.605469 5.66254Z" fill="#42ADE2" />
-                        <path d="M2.58594 10.0976L3.99943 8.68359L5.41342 10.0976L3.99943 11.5116L2.58594 10.0976Z" fill="#FF8736" />
-                        <path d="M6.17969 3.41009L7.59368 1.99609L9.00767 3.41009L7.59368 4.82408L6.17969 3.41009Z" fill="#ED4C5C" />
-                        <path d="M21.6016 20.3481L23.0156 18.9336L24.4295 20.3481L23.0156 21.7621L21.6016 20.3481Z" fill="#C28FEF" />
-                        <path d="M18.4512 25.1952L19.8652 23.7812L21.2797 25.1957L19.8652 26.6097L18.4512 25.1952Z" fill="#ED4C5C" />
-                        <path d="M24.6387 26.3032L26.0527 24.8887L27.4667 26.3032L26.0527 27.7172L24.6387 26.3032Z" fill="#FF8736" />
-                        <path d="M26.0387 19.8645L27.4527 18.4505L28.8667 19.8645L27.4527 21.279L26.0387 19.8645ZM23.6777 4.91059L25.0917 3.49609L26.5062 4.91059L25.0922 6.32458L23.6777 4.91059Z" fill="#42ADE2" />
-                        <path d="M8.52148 13.3964L9.93598 11.9824L11.35 13.3964L9.93598 14.8109L8.52148 13.3964Z" fill="#ED4C5C" />
-                    </svg>
-                </span>
-            } />
+        <div className='px-[20px] relative font-inter md:px-[50px] xl:px-[210px] mt-[45px] flex flex-col gap-[32px]'>
+
+            <span className='text-[20px] font-semibold text-[#201926]'>
+                Over view all info
+            </span>
             <div className="flex flex-col gap-[32px]">
                 <ImageUpload coverImage={coverImage} />
                 <div className="-mt-[90px]">
                     <WaveAvatar profileImage={profileImage} />
                 </div>
             </div>
-            <span className='text-[20px] text-[#201926] font-semibold'>
-                Over view all info
-            </span>
-            <span className='text-[#5B5B5D] text-[14px] font-medium'>
+            <span className='text-[#5B5B5D] -mt-8 text-[14px] font-medium'>
                 Bio : {bio}
             </span>
             <div className='flex flex-col gap-[24px]'>
@@ -74,7 +46,7 @@ export default function StepFive({ step, setStep, bio, selectedExpert, selectedT
                                 // onClick={() => handleCategoryClick(category)}
                                 className={`flex-1 px-[18px] py-[20px]  rounded-[7px] h-[140px] min-w-[234px] cursor-pointer transition-all duration-200
                                 border 
-                                border-[#008AAB] shadow-lg bg-[#ebf2f7]
+                                border-[#008AAB] bg-[#ebf2f7]
                                 }
                             `}
                             >
@@ -137,7 +109,7 @@ export default function StepFive({ step, setStep, bio, selectedExpert, selectedT
                             <div
                                 key={index}
                                 className={`flex-1 px-[18px] py-[20px]  rounded-[16px] cursor-pointer transition-all duration-200
-                                border border-[#008AAB] shadow-lg bg-[#ebf2f7]
+                                border border-[#008AAB]  bg-[#ebf2f7]
                             `}
                             >
                                 <img
@@ -182,7 +154,7 @@ export default function StepFive({ step, setStep, bio, selectedExpert, selectedT
                     }
                 </div>
             </div>
-            <div className="w-full flex flex-row gap-[24px] justify-end mt-[40px]">
+            <div className="w-full fixed bottom-0 left-0 bg-white lg:bg-transparent p-3 lg:p-0 lg:relative  flex flex-row gap-[24px] border-1 border-gray-300 justify-center lg:justify-end mt-[40px]">
                 <button onClick={() => setStep(step - 1)} title="Next" type="button" className="w-[172px] flex flex-row justify-center items-center gap-[10px] h-[56px] text-[#018AAF] rounded-[12px] text-[16px] text-center bg-transparent border-[#018AAF] border">
                     <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8.47533 4.94141L3.41699 9.99974L8.47533 15.0581" stroke="#018AAF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />

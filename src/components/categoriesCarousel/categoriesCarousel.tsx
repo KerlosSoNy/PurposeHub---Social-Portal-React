@@ -90,7 +90,7 @@ export default function CategorySelector({
                             onClick={() => handleCategoryClick(category)}
                             className={`flex-1 px-[18px] py-[20px] rounded-[7px] h-[140px] min-w-[234px] cursor-pointer transition-all duration-200
                                 border ${selectedCategories.includes(category)
-                                    ? "border-[#008AAB] shadow-lg bg-[#ebf2f7]"
+                                    ? "border-[#008AAB] bg-[#ebf2f7]"
                                     : "border-[#979797] hover:border-[#008AAB] bg-white hover:shadow-md"
                                 }
                             `}
@@ -111,9 +111,9 @@ export default function CategorySelector({
                         type="button"
                         title="Previous"
                         onClick={prevSlide}
-                        className="absolute -left-2 md:-left-10 xl:-left-16 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50"
+                        className="absolute -left-2 md:-left-10 xl:-left-16 top-1/2 -translate-y-1/2 bg-white border-[1px] border-[#008AAB] rounded-full p-2 hover:bg-gray-50"
                     >
-                        <ChevronLeft className="w-5 h-5 text-gray-600" />
+                        <ChevronLeft className="w-5 h-5 text-[#008AAB]" />
                     </button>
                 )}
 
@@ -122,9 +122,9 @@ export default function CategorySelector({
                         type="button"
                         title="Next"
                         onClick={nextSlide}
-                        className="absolute -right-2 md:-right-10 xl:-right-16 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50"
+                        className="absolute -right-2 md:-right-10 xl:-right-16 top-1/2 -translate-y-1/2 bg-white  border-[1px] border-[#008AAB] rounded-full p-2 hover:bg-gray-50"
                     >
-                        <ChevronRight className="w-5 h-5 text-gray-600" />
+                        <ChevronRight className="w-5 h-5 text-[#008AAB]" />
                     </button>
                 )}
             </div>

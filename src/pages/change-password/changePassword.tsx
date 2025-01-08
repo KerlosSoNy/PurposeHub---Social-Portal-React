@@ -15,10 +15,10 @@ export default function ChangePassword() {
             ${error?.password ? "pt-[10px] sm:pt-[47px] xl:pt-[97px] 3xl:pt-[147px]" : "pt-[20px] sm:pt-[50px] xl:pt-[172px] "} gap-[50px]`}>
                 <div className="flex flex-col justify-center max-w-[434px] items-start bg-white">
 
-                    <div className="flex flex-col justify-start mb-[15px] 3xl:mb-[24px]">
+                    <div className="flex flex-col items-center xl:items-start justify-start mb-[15px] 3xl:mb-[24px]">
                         <img src="/icons/logo.png" alt="logo" className="w-[70px] h-[59px]" />
                         <h2 className="text-black text-[32px] font-semibold mt-[20px] mb-[8px] 3xl:mt-[32px] 3xl:mb-[12px]">Change your password </h2>
-                        <span className="text-[16px] text-[#667085] w-[80%] md:w-[70%]">
+                        <span className="text-[16px] text-[#667085] w-[100%] text-center xl:text-start xl:w-[70%]">
                             Please change your current password
                             and confirm it now.</span>
                     </div>

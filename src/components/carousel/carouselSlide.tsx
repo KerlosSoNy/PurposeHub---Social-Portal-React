@@ -8,7 +8,7 @@ interface CarouselSlideProps {
 export function CarouselSlide({ image, index }: CarouselSlideProps) {
     return (
         <div
-            className={`absolute flex  flex-col items-center left-0 gap-[80px] w-full ${image?.extraUrl ? "pt-[190px]" : image?.signUp ? "pt-[150px]" : "pt-[120px]"}`}
+            className={`absolute flex  flex-col items-center left-0 gap-[80px] w-full ${image?.extraUrl ? "pt-[190px]" : image?.signUp ? "pt-[14.5vh]" : "pt-[12vh]"}`}
             style={{ transform: `translateX(${index * 100}%)` }}
         >
             <img

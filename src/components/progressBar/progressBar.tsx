@@ -9,12 +9,12 @@ export function ProgressBar({ progress, text }: ProgressBarProps) {
             <p className="text-[17px] font-medium text-[#201926] mb-[34px]">{text}</p>
             <div className="relative w-full h-[16px] bg-gray-200 rounded-full">
                 <div
-                    className="absolute  left-0 h-full bg-[#00A3D7] rounded-full"
+                    className="absolute duration-1000 transition-all ease-in-out left-0 h-full bg-[#00A3D7] rounded-full"
                     style={{ width: `${progress === 0 ? 2 : progress}%` }}
                 />
                 <div
-                    className="absolute flex items-center justify-center w-[56px] h-[56px] translate-y-2/3 bg-white border-[4px] border-[#00A3D7] rounded-full"
-                    style={{ left: `${progress === 0 ? 3 : progress === 100 ? 97.5 : progress}%`, transform: `translate(-50%, -40%)` }}
+                    className="absolute flex items-center justify-center duration-1000 transition-all ease-in-out w-[56px] h-[56px] translate-y-2/3 bg-white border-[4px] border-[#00A3D7] rounded-full"
+                    style={{ left: `${progress === 0 ? 1 : progress === 100 ? 99 : progress}%`, transform: `translate(-50%, -40%)` }}
                 >
                     <span className="text-xs text-[15px] text-[#201926] font-[400]">{progress}%</span>
                 </div>
