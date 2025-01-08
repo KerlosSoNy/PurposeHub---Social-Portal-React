@@ -91,7 +91,7 @@ export default function CategorySelector({
                             className={`flex-1 px-[18px] py-[20px] rounded-[7px] h-[140px] min-w-[234px] cursor-pointer transition-all duration-200
                                 border ${selectedCategories.includes(category)
                                     ? "border-[#008AAB] shadow-lg bg-[#ebf2f7]"
-                                    : "border-[#979797] hover:border-[#008AAB] hover:shadow-md"
+                                    : "border-[#979797] hover:border-[#008AAB] bg-white hover:shadow-md"
                                 }
                             `}
                         >

@@ -67,10 +67,10 @@ export default function ExpertCategorySelector({
 
     return (
         <div className="w-full">
-            <div className="flex items-center justify-between mb-4">
-                <h2 className="text-[16px] font-medium text-gray-700">
+            <div className="flex items-center flex-wrap justify-between mb-4">
+                <h2 className="text-[16px] font-medium  text-gray-700">
                     Follow Top Expertise
-                    <span className="font-[400]">(minimum 3)</span>
+                    <span className="font-[400] ms-1">(minimum 3)</span>
                 </h2>
                 <button className="text-blue-500 text-sm">
                     Explore More

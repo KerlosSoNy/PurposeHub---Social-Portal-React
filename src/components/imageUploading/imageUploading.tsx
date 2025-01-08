@@ -56,7 +56,7 @@ export function ImageUpload({ coverImage, setCoverImage }: {
             <h3 className="text-[16px] mb-[24px] font-medium text-[#201926]">Upload your personal image <span className='font-[400]'>(Optional)</span></h3>
 
             <div
-                className={`relative border-2 border-dashed bg-white rounded-[8px] p-8 transition-colors border-[#1849D6]`}
+                className={`relative border-2 border-dashed bg-white rounded-[8px] ${setCoverImage ? "p-8" : "p-0"} transition-colors border-[#1849D6]`}
                 onDragOver={handleDragOver}
                 onDragLeave={handleDragLeave}
                 onDrop={handleDrop}

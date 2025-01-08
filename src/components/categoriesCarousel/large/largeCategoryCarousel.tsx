@@ -21,17 +21,20 @@ export default function LargeCategorySelector({
         };
     }, []);
     const [startIndex, setStartIndex] = useState(0);
-    const [itemsPerLine] = useState(4)
+    const [itemsPerLine, setItemsPerLine] = useState(4)
     const [linesToShow, setLinesToShow] = useState(2)
     const [itemsToShow, setItemsToShow] = useState(itemsPerLine * linesToShow)
 
     useEffect(() => {
         if (screenWidth < 500) {
+            setItemsPerLine(1)
             setLinesToShow(1)
             setItemsToShow(1 * 1);
         } else if (screenWidth < 900) {
+            setItemsPerLine(3)
             setItemsToShow(2 * 3);
         } else {
+            setItemsPerLine(3)
             setItemsToShow(2 * 3);
         }
     }, [screenWidth, linesToShow]);
@@ -39,7 +42,7 @@ export default function LargeCategorySelector({
     const nextSlide = () => {
         setStartIndex((prev) =>
             prev + itemsPerLine >= LargeCategory.length
-                ? 0 // Wrap around to the start
+                ? 0
                 : prev + itemsPerLine
         );
     };
@@ -47,7 +50,7 @@ export default function LargeCategorySelector({
     const prevSlide = () => {
         setStartIndex((prev) =>
             prev - itemsPerLine < 0
-                ? Math.max(0, LargeCategory.length - itemsToShow) // Wrap around to the end
+                ? Math.max(0, LargeCategory.length - itemsToShow)
                 : prev - itemsPerLine
         );
     };
