@@ -114,76 +114,6 @@ export const expertCards = [
         expertise: "Physics Expert",
         followers: 1578,
         followed: true,
-        avatar: "avatar2.png",
-    },
-    {
-        name: "James Robinson",
-        expertise: "Math Expert",
-        followers: 1578,
-        followed: false,
-        avatar: "https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", // Replace with actual image paths
-    },
-    {
-        name: "James Robinson",
-        expertise: "Physics Expert",
-        followers: 1578,
-        followed: true,
-        avatar: "avatar2.png",
-    },
-    {
-        name: "James Robinson",
-        expertise: "Math Expert",
-        followers: 1578,
-        followed: false,
-        avatar: "https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", // Replace with actual image paths
-    },
-    {
-        name: "James Robinson",
-        expertise: "Physics Expert",
-        followers: 1578,
-        followed: true,
-        avatar: "avatar2.png",
-    },
-    {
-        name: "James Robinson",
-        expertise: "Math Expert",
-        followers: 1578,
-        followed: false,
-        avatar: "https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", // Replace with actual image paths
-    },
-    {
-        name: "James Robinson",
-        expertise: "Physics Expert",
-        followers: 1578,
-        followed: true,
-        avatar: "avatar2.png",
-    },
-    {
-        name: "James Robinson",
-        expertise: "Math Expert",
-        followers: 1578,
-        followed: false,
-        avatar: "https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", // Replace with actual image paths
-    },
-    {
-        name: "James Robinson",
-        expertise: "Math Expert",
-        followers: 1578,
-        followed: false,
-        avatar: "https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", // Replace with actual image paths
-    },
-    {
-        name: "James Robinson",
-        expertise: "Math Expert",
-        followers: 1578,
-        followed: false,
-        avatar: "https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", // Replace with actual image paths
-    },
-    {
-        name: "James Robinson",
-        expertise: "Math Expert",
-        followers: 1578,
-        followed: false,
         avatar: "https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", // Replace with actual image paths
     },
     {
@@ -198,7 +128,77 @@ export const expertCards = [
         expertise: "Physics Expert",
         followers: 1578,
         followed: true,
-        avatar: "avatar2.png",
+        avatar: "https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", // Replace with actual image paths
+    },
+    {
+        name: "James Robinson",
+        expertise: "Math Expert",
+        followers: 1578,
+        followed: false,
+        avatar: "https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", // Replace with actual image paths
+    },
+    {
+        name: "James Robinson",
+        expertise: "Physics Expert",
+        followers: 1578,
+        followed: true,
+        avatar: "https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", // Replace with actual image paths
+    },
+    {
+        name: "James Robinson",
+        expertise: "Math Expert",
+        followers: 1578,
+        followed: false,
+        avatar: "https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", // Replace with actual image paths
+    },
+    {
+        name: "James Robinson",
+        expertise: "Physics Expert",
+        followers: 1578,
+        followed: true,
+        avatar: "https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", // Replace with actual image paths
+    },
+    {
+        name: "James Robinson",
+        expertise: "Math Expert",
+        followers: 1578,
+        followed: false,
+        avatar: "https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", // Replace with actual image paths
+    },
+    {
+        name: "James Robinson",
+        expertise: "Math Expert",
+        followers: 1578,
+        followed: false,
+        avatar: "https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", // Replace with actual image paths
+    },
+    {
+        name: "James Robinson",
+        expertise: "Math Expert",
+        followers: 1578,
+        followed: false,
+        avatar: "https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", // Replace with actual image paths
+    },
+    {
+        name: "James Robinson",
+        expertise: "Math Expert",
+        followers: 1578,
+        followed: false,
+        avatar: "https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", // Replace with actual image paths
+    },
+    {
+        name: "James Robinson",
+        expertise: "Math Expert",
+        followers: 1578,
+        followed: false,
+        avatar: "https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", // Replace with actual image paths
+    },
+    {
+        name: "James Robinson",
+        expertise: "Physics Expert",
+        followers: 1578,
+        followed: true,
+        avatar: "https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", // Replace with actual image paths
     },
     // Add more card objects as needed
 ];
