@@ -1,7 +1,9 @@
 import { useState, useRef } from 'react';
 import { Upload, Image as ImageIcon } from 'lucide-react';
 
-export function ImageUpload() {
+export function ImageUpload({ coverImage, setCoverImage }: {
+    coverImage: File | string | null, setCoverImage?: any
+}) {
     const [image, setImage] = useState<string | null>(null);
     const [isDragging, setIsDragging] = useState(false);
     const fileInputRef = useRef<HTMLInputElement>(null);
@@ -45,7 +47,7 @@ export function ImageUpload() {
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const file = e.target.files?.[0];
         if (file) {
-            handleImageUpload(file);
+            setCoverImage(file);
         }
     };
 
@@ -69,11 +71,12 @@ export function ImageUpload() {
                     onChange={handleFileChange}
                 />
 
-                <div className="flex flex-col items-center justify-center space-y-2">
-                    {image ? (
+                {setCoverImage ? <div className="flex flex-col items-center justify-center space-y-2">
+                    {coverImage ? (
                         <div className="relative">
                             <img
-                                src={image}
+                                // @ts-ignore
+                                src={coverImage instanceof File ? URL.createObjectURL(coverImage) : image}
                                 alt="Preview"
                                 className="w-24 h-24 rounded-full object-cover border-4 border-white shadow-lg"
                             />
@@ -88,7 +91,12 @@ export function ImageUpload() {
                         <p className="text-sm font-[400] text-black mt-[8px]">Drag your image (cover) or <span className='text-[#018AAF]'>browse</span></p>
                         <p className="text-xs text-gray-500 mt-[8px]">Max 10 MB image are allowed</p>
                     </div>
-                </div>
+                </div> :
+                    <img // @ts-ignore
+                        src={coverImage instanceof File ? URL.createObjectURL(coverImage) : image}
+                        alt="Preview"
+                        className='max-h-[169px] w-full object-fill'
+                    />}
             </div>
         </div>
     );

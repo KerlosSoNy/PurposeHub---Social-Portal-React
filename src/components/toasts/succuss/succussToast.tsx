@@ -32,7 +32,7 @@ export default function SuccessToast({ title, body, duration = 5000, onClose }: 
 
     return (
         <div
-            className={`absolute bg-white z-[100000] top-5 end-2 md:end-10 flex items-center p-4 rounded-lg shadow-md w-[70%] sm:w-96 hover:cursor-pointer toast-error-bg overflow-hidden 
+            className={`absolute bg-white z-[100000] top-5 end-2 md:end-10 flex items-center p-4 rounded-lg shadow-md w-[90%] sm:w-96 hover:cursor-pointer toast-error-bg overflow-hidden 
                 transform transition-transform duration-500 ease-in-out 
                 ${isVisible ? "translate-y-0 opacity-100" : "-translate-y-20 opacity-100"}`}
             onMouseEnter={() => setIsHovered(true)}

@@ -1,7 +1,8 @@
-import { useState } from 'react';
 
-export function BioInput() {
-    const [bio, setBio] = useState('');
+export function BioInput({ bio, setBio }: {
+    bio: string
+    setBio: any
+}) {
     const maxLength = 500;
 
     const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {

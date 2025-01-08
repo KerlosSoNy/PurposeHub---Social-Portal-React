@@ -32,7 +32,7 @@ export default function LargeCategorySelector({
         } else if (screenWidth < 900) {
             setItemsToShow(linesToShow * 3);
         } else {
-            setItemsToShow(linesToShow * 4);
+            setItemsToShow(linesToShow * 3);
         }
     }, [screenWidth, linesToShow]);
 
@@ -84,7 +84,7 @@ export default function LargeCategorySelector({
                 <div
                     className={`grid gap-4`}
                     style={{
-                        gridTemplateColumns: screenWidth < 500 ? "repeat(1, 1fr)" : screenWidth < 900 ? "repeat(3, 1fr)" : "repeat(4, 1fr)",
+                        gridTemplateColumns: screenWidth < 500 ? "repeat(1, 1fr)" : screenWidth < 900 ? "repeat(3, 1fr)" : "repeat(3, 1fr)",
                         gridTemplateRows: `repeat(${linesToShow}, minmax(0, 1fr))`,
                     }}>
                     {visibleCategories.map((card, index) => (
@@ -104,7 +104,7 @@ export default function LargeCategorySelector({
                                 className="w-full h-[170px] object-cover rounded-t-lg"
                             />
                             <div className="p-4 mt-[22px]">
-                                <div className="flex flex-row flex-wrap justify-between items-start">
+                                <div className="flex flex-row flex-wrap md:flex-nowrap justify-between items-start">
                                     <div>
                                         <h2 className="text-lg font-bold text-gray-800">
                                             {card.title}

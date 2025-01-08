@@ -127,7 +127,7 @@ export default function ExpertCategorySelector({
                         type="button"
                         title="Previous"
                         onClick={prevSlide}
-                        className="absolute -left-16 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50"
+                        className="absolute -left-2 md:-left-10 xl:-left-16 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50"
                     >
                         <ChevronLeft className="w-5 h-5 text-gray-600" />
                     </button>
@@ -138,7 +138,7 @@ export default function ExpertCategorySelector({
                         type="button"
                         title="Next"
                         onClick={nextSlide}
-                        className="absolute -right-16 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50"
+                        className="absolute -right-2 md:-right-10 xl:-right-16 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50"
                     >
                         <ChevronRight className="w-5 h-5 text-gray-600" />
                     </button>
