@@ -25,16 +25,16 @@ export default function CategorySelector({
     const [itemsPerLine] = useState(4)
     const [linesToShow] = useState(2)
     const [itemsToShow, setItemsToShow] = useState(itemsPerLine * linesToShow)
-    useEffect(() => {
-        if (screenWidth < 900) {
-            setItemsToShow(2 * 3)
-        } else if (screenWidth > 900) {
-            setItemsToShow(linesToShow * 4)
-        } else if (screenWidth < 500) {
-            setItemsToShow(linesToShow * 1)
-        }
-    }, [screenWidth])
 
+    useEffect(() => {
+        if (screenWidth < 500) {
+            setItemsToShow(linesToShow * 1);
+        } else if (screenWidth < 900) {
+            setItemsToShow(linesToShow * 3);
+        } else {
+            setItemsToShow(linesToShow * 4);
+        }
+    }, [screenWidth, linesToShow]);
 
     const nextSlide = () => {
         setStartIndex((prev) =>
@@ -67,7 +67,7 @@ export default function CategorySelector({
 
     return (
         <div className="w-full">
-            <div className="flex items-center flex-wrap justify-between mb-4">
+            <div className="flex items-center flex-wrap justify-between mb-5">
                 <h2 className="text-[16px] font-medium text-gray-700">
                     Select your categories
                     <span className="font-[400]">(minimum 3)</span>
@@ -77,11 +77,11 @@ export default function CategorySelector({
                 </button>
             </div>
 
-            <div className="relative">
+            <div className="relative px-10 md:px-0">
                 <div
                     className={`grid gap-4`}
                     style={{
-                        gridTemplateColumns: screenWidth < 900 ? "repeat(3, 1fr)" : screenWidth < 500 ? "repeat(1, 1fr)" : "repeat(4, 1fr)",
+                        gridTemplateColumns: screenWidth < 500 ? "repeat(1, 1fr)" : screenWidth < 900 ? "repeat(3, 1fr)" : "repeat(4, 1fr)",
                         gridTemplateRows: `repeat(${linesToShow}, minmax(0, 1fr))`,
                     }}>
                     {visibleCategories.map((category, index) => (
@@ -111,7 +111,7 @@ export default function CategorySelector({
                         type="button"
                         title="Previous"
                         onClick={prevSlide}
-                        className="absolute md:-left-10 xl:-left-16 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50"
+                        className="absolute -left-2 md:-left-10 xl:-left-16 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50"
                     >
                         <ChevronLeft className="w-5 h-5 text-gray-600" />
                     </button>
@@ -122,7 +122,7 @@ export default function CategorySelector({
                         type="button"
                         title="Next"
                         onClick={nextSlide}
-                        className="absolute md:-right-10     xl:-right-16 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50"
+                        className="absolute -right-2 md:-right-10 xl:-right-16 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50"
                     >
                         <ChevronRight className="w-5 h-5 text-gray-600" />
                     </button>

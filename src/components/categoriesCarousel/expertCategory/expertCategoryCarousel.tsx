@@ -1,5 +1,5 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { categories, expertCards } from "../constant";
 
 export default function ExpertCategorySelector({
@@ -9,10 +9,32 @@ export default function ExpertCategorySelector({
     setSelectedCategories: (categories: any[]) => void;
     selectedCategories: any[];
 }) {
+    const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setScreenWidth(window.innerWidth);
+        };
+        window.addEventListener("resize", handleResize);
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
     const [startIndex, setStartIndex] = useState(0);
-    const itemsPerLine = 4;
-    const linesToShow = 2;
-    const itemsToShow = itemsPerLine * linesToShow;
+    const [itemsPerLine] = useState(4)
+    const [linesToShow] = useState(2)
+    const [itemsToShow, setItemsToShow] = useState(itemsPerLine * linesToShow)
+
+    useEffect(() => {
+        if (screenWidth < 500) {
+            setItemsToShow(linesToShow * 1);
+        } else if (screenWidth < 900) {
+            setItemsToShow(linesToShow * 3);
+        } else {
+            setItemsToShow(linesToShow * 4);
+        }
+    }, [screenWidth, linesToShow]);
 
     const nextSlide = () => {
         setStartIndex((prev) =>
@@ -55,8 +77,13 @@ export default function ExpertCategorySelector({
                 </button>
             </div>
 
-            <div className="relative">
-                <div className="grid grid-cols-4 gap-4">
+            <div className="relative px-10 md:px-0">
+                <div
+                    className={`grid gap-4`}
+                    style={{
+                        gridTemplateColumns: screenWidth < 500 ? "repeat(1, 1fr)" : screenWidth < 900 ? "repeat(3, 1fr)" : "repeat(4, 1fr)",
+                        gridTemplateRows: `repeat(${linesToShow}, minmax(0, 1fr))`,
+                    }}>
                     {visibleCategories.map((card, index) => (
                         <div
                             key={index}

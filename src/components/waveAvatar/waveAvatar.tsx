@@ -1,7 +1,7 @@
 
 export default function WaveAvatar() {
     return (
-        <div className="relative w-[200px] h-[150px] flex items-center justify-center">
+        <div className="relative w-[200px] ms-[20vw] sm:ms-0 mt-2 sm:mt-0 h-[150px] flex items-center justify-center">
             <img src="/icons/aroundProfilePic.svg" alt="Wave" className="w-[160px] h-[180px] object-cover absolute -top-3 left-5" />
             <label htmlFor="avatar" className="w-[100px] hover:cursor-pointer transition-all duration-300 ease-in-out h-[100px] group rounded-full relative  z-10 bg-gray-200">
                 <img

@@ -1,5 +1,5 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { LargeCategory } from "../constant";
 
 export default function LargeCategorySelector({
@@ -9,10 +9,32 @@ export default function LargeCategorySelector({
     setSelectedCategories: (categories: any[]) => void;
     selectedCategories: any[];
 }) {
+    const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setScreenWidth(window.innerWidth);
+        };
+        window.addEventListener("resize", handleResize);
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
     const [startIndex, setStartIndex] = useState(0);
-    const itemsPerLine = 3;
-    const linesToShow = 2;
-    const itemsToShow = itemsPerLine * linesToShow;
+    const [itemsPerLine] = useState(4)
+    const [linesToShow, setLinesToShow] = useState(2)
+    const [itemsToShow, setItemsToShow] = useState(itemsPerLine * linesToShow)
+
+    useEffect(() => {
+        if (screenWidth < 500) {
+            setLinesToShow(1)
+            setItemsToShow(1 * 1);
+        } else if (screenWidth < 900) {
+            setItemsToShow(linesToShow * 3);
+        } else {
+            setItemsToShow(linesToShow * 4);
+        }
+    }, [screenWidth, linesToShow]);
 
     const nextSlide = () => {
         setStartIndex((prev) =>
@@ -50,7 +72,7 @@ export default function LargeCategorySelector({
 
     return (
         <div className="w-full">
-            <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center justify-between mb-5 flex-wrap">
                 <h2 className="text-[16px] font-medium text-gray-700">
                     Select your courses
                     <span className="font-[400]">(minimum 3)</span>
@@ -58,8 +80,13 @@ export default function LargeCategorySelector({
                 <button className="text-blue-500 text-sm">Explore More</button>
             </div>
 
-            <div className="relative">
-                <div className="grid grid-cols-3 gap-4">
+            <div className="relative px-10 md:px-0">
+                <div
+                    className={`grid gap-4`}
+                    style={{
+                        gridTemplateColumns: screenWidth < 500 ? "repeat(1, 1fr)" : screenWidth < 900 ? "repeat(3, 1fr)" : "repeat(4, 1fr)",
+                        gridTemplateRows: `repeat(${linesToShow}, minmax(0, 1fr))`,
+                    }}>
                     {visibleCategories.map((card, index) => (
                         <div
                             key={index}
@@ -77,7 +104,7 @@ export default function LargeCategorySelector({
                                 className="w-full h-[170px] object-cover rounded-t-lg"
                             />
                             <div className="p-4 mt-[22px]">
-                                <div className="flex flex-row justify-between items-start">
+                                <div className="flex flex-row flex-wrap justify-between items-start">
                                     <div>
                                         <h2 className="text-lg font-bold text-gray-800">
                                             {card.title}
@@ -117,7 +144,7 @@ export default function LargeCategorySelector({
                         type="button"
                         title="Previous"
                         onClick={prevSlide}
-                        className="absolute -left-16 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50"
+                        className="absolute -left-2 md:-left-10 xl:-left-16 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50"
                     >
                         <ChevronLeft className="w-5 h-5 text-gray-600" />
                     </button>
@@ -128,7 +155,7 @@ export default function LargeCategorySelector({
                         type="button"
                         title="Next"
                         onClick={nextSlide}
-                        className="absolute -right-16 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50"
+                        className="absolute -right-2 md:-right-10 xl:-right-16 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50"
                     >
                         <ChevronRight className="w-5 h-5 text-gray-600" />
                     </button>
