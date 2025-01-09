@@ -53,20 +53,19 @@ export default function CreatePost() {
                             <img src="/posts/badge.png" alt="Badge" className="w-[40px] h-[40px] hidden sm:block" />
                         </button>
                     </div>
-
                     <div className="relative sm:hidden" ref={menuRef}>
                         <button
                             type="button"
                             title="More"
-                            className="w-[40px] h-[40px] flex items-center justify-center border-[1.5px] rounded-full"
+                            className="w-[40px] h-[40px] -ms-10 flex items-center justify-center border-[1.5px] rounded-full"
                             onClick={() => setShowMenu(!showMenu)}
                         >
                             <EllipsisVertical size={20} color='#C4C4C4' />
 
                         </button>
                         {showMenu && (
-                            <div className="absolute top-full -start-2 mt-2 w-[60px] bg-white shadow-lg rounded-lg z-10">
-                                <ul className="flex flex-col gap-2 p-2">
+                            <div className="absolute top-full -start-12 mt-2  w-[60px] bg-white shadow-lg rounded-lg z-[50]">
+                                <ul className="flex flex-col items-center gap-2 p-2">
                                     <li><img src="/posts/player.png" alt="Player" className="w-[40px] h-[40px]" /></li>
                                     <li><img src="/posts/hash.png" alt="Hashtag" className="w-[40px] h-[40px]" /></li>
                                     <li><img src="/posts/setting.png" alt="Settings" className="w-[40px] h-[40px]" /></li>
@@ -75,6 +74,7 @@ export default function CreatePost() {
                             </div>
                         )}
                     </div>
+
                 </div>
 
                 {/* Post Button */}

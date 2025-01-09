@@ -18,6 +18,8 @@ export default function Profile() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isBlock, setIsBlock] = useState(false);
     const [activeTab, setActiveTab] = useState('Posts');
+    const [isFriends, setIsFriends] = useState(false);
+    const [follow, setFollow] = useState(false);
     const { id } = useParams();
     const tabs = [
         { name: 'Posts', isActive: activeTab === 'Posts' },
@@ -38,7 +40,7 @@ export default function Profile() {
         }
     ];
     return (
-        <div className="flex flex-col font-inter max-w-screen bg-[#f5f5f5]">
+        <div className="flex flex-col min-h-screen font-inter max-w-screen bg-[#f5f5f5]">
             <Navbar />
             <div className="flex flex-row justify-center xl:justify-between gap-[37px] main-body min-w-screen pb-[27px] pt-[calc(64px+32px)]">
                 <div className="hidden !w-[clamp(300px,337px,369px)] xl:flex flex-row justify-center relative">
@@ -75,12 +77,12 @@ export default function Profile() {
                                 className={`absolute start-3 z-[1000] top-[62px] min-w-[259px] p-0 bg-white shadow-lg rounded-[10px] 
                                 transition-all duration-300 ease-in-out ${isMenuOpen ? '-translate-x-0 block' : '-translate-x-[1000px] hidden'}`}
                             >
-                                <FriendsMenu setIsOpen={setIsMenuOpen} setIsBlock={setIsBlock} isBlock={isBlock} isOpen={isMenuOpen} />
+                                <FriendsMenu setFollow={setFollow} follow={follow} setIsFriends={setIsFriends} isFriends={isFriends} setIsOpen={setIsMenuOpen} setIsBlock={setIsBlock} isBlock={isBlock} isOpen={isMenuOpen} />
                             </div>
                             {id ? <div className="flex flex-row  items-center flex-wrap gap-[8px]">
                                 <button id='friendsButton' type="button" onClick={() => setIsMenuOpen(!isMenuOpen)} className="flex flex-row  rounded-[16px] gap-[4px] h-[40px] py-[6px] ps-[14px] pe-[16px] justify-center items-center text-white bg-[#018AAF]" title="Friends">
                                     <img src="/profile/friends.svg" alt="" />
-                                    Friends
+                                    {isFriends ? 'Friends' : 'Add Friend'}
                                 </button>
                                 <button className="flex flex-row rounded-[16px] border-[1px] border-[#2F2F2F] gap-[4px] h-[40px] py-[6px] ps-[14px] pe-[16px] justify-center items-center text-[#2F2F2F]" title="Friends">
                                     <img src="/profile/messages.svg" alt="" />

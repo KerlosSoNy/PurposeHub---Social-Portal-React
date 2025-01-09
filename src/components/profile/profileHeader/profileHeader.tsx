@@ -1,4 +1,5 @@
 import { Camera } from "lucide-react";
+import { useState } from "react";
 
 interface ProfileHeaderProps {
     coverImage: string;
@@ -6,12 +7,13 @@ interface ProfileHeaderProps {
 }
 
 export function ProfileHeader({ coverImage, profileImage }: ProfileHeaderProps) {
-
+    const [cover, setCover] = useState<File | null | string>(coverImage);
+    const [profile, setProfile] = useState<File | null | string>(profileImage);
     return (
         <div className="relative">
             <div className="h-48 bg-gradient-to-r from-blue-100 to-purple-100">
                 <img
-                    src={coverImage}
+                    src={cover instanceof File ? URL.createObjectURL(cover) : coverImage}
                     alt="Cover"
                     className="w-full h-full object-cover"
                 />
@@ -27,20 +29,20 @@ export function ProfileHeader({ coverImage, profileImage }: ProfileHeaderProps) 
                         </defs>
                     </svg>
                 </label>
-                <input accept="image/*" title="Upload Cover" type="file" className="hidden" id="cover" />
+                <input onChange={(e) => e.target.files && setCover(e.target.files[0])} accept="image/*" title="Upload Cover" type="file" className="hidden" id="cover" />
             </div>
             <div className="absolute -bottom-9 left-[15px]">
                 <div className="rounded-full relative border-4 border-white w-32 h-32 overflow-hidden">
                     <img
-                        src={profileImage}
+                        src={profile instanceof File ? URL.createObjectURL(profile) : profileImage}
                         alt="Profile"
                         className="w-full h-full object-cover"
                     />
                 </div>
+                <input onChange={(e) => e.target.files && setProfile(e.target.files[0])} accept="image/*" title="Upload Image" type="file" className="hidden" id="avatar" />
                 <label htmlFor="avatar" className="absolute hover:cursor-pointer bottom-3 end-2 z-[100] p-1 rounded-full bg-black/50">
                     <Camera className="w-[16px] h-[16px] text-white" />
                 </label>
-                <input accept="image/*" title="Upload Image" type="file" className="hidden" id="avatar" />
             </div>
         </div>
     );

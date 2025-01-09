@@ -36,7 +36,7 @@ export function Post({
     const [showAllComments, setShowAllComments] = useState(true);
     return (
         // @ts-ignore
-        <div className={`${typesOfPosts[`${type}`] ? typesOfPosts[`${type}`].bgColor : 'bg-white'} overflow-hidden relative rounded-[20px] ps-[34px] pe-[35px] py-[24px]  w-full`}>
+        <div className={`${typesOfPosts[`${type}`] ? typesOfPosts[`${type}`].bgColor : 'bg-white'} overflow-hidden shadow-sm relative rounded-[20px] ps-[34px] pe-[35px] py-[24px]  w-full`}>
             {
                 // @ts-ignore 
                 type && <img src={typesOfPosts[`${type}`] ? typesOfPosts[`${type}`].bgImage : ""} alt="line" className="w-full absolute z-[1]" />

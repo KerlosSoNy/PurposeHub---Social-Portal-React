@@ -40,10 +40,10 @@ export function ExperienceCard({ experience, last = false }: ExperienceCardProps
                 </div>
 
                 <div className="mt-2 flex flex-row gap-[8px]">
-                    <p className="text-[14px] text-gray-600">
+                    <p className="text-[14px] font-[400] text-gray-600">
                         {experience.startDate} — {experience.endDate}
                     </p>
-                    <div className="text-[14px] text-[#018AAF] flex items-center">
+                    <div className="text-[14px] font-[400] text-[#018AAF] flex items-center">
                         {experience.duration}
                     </div>
                 </div>

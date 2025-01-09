@@ -7,7 +7,6 @@ import { Link } from "react-router";
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [openProfile, setOpenProfile] = useState(false);
-    console.log(openProfile)
     return (
         <div className="flex flex-row fixed z-[1000] items-center w-screen nav-body bg-white justify-between">
             <div className="flex flex-row items-center gap-[32px]">
@@ -47,7 +46,7 @@ export default function Navbar() {
                     <img id="PersonAvatar" src="/icons/person.png" alt="Bell" className="nav-profile-body rounded-full" />
                     <span id="UserName" className="font-bold profileButton hidden md:block  nav-profile-name">Omar Ashraf</span>
                     <div className=" pt-1 hover:cursor-pointer">
-                        <button id="profileButton" title="Dropdown" type="button" className="rounded-full w-[24px] h-[24px] pt-[1px] ps-[7px] !border-[0.2px] border-[#5C5C5C]">
+                        <button id="profileButton" title="Dropdown" type="button" className={`rounded-full w-[24px] h-[24px] pt-[1px] ps-[7px] !border-[0.2px] ${openProfile ? 'border-[#008AAB] active-icon' : 'border-[#5C5C5C]'}`}>
                             <img id="profileButtonIcon" src="/icons/down.png" alt="Bell" className="w-[8px] z-[1000] h-[5.3px]" />
                         </button>
                         <div

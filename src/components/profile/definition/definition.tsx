@@ -27,8 +27,8 @@ export default function Definition() {
             <div className="bg-white mt-[24px] rounded-[20px] px-[16px] py-[24px] flex flex-row items-center justify-between">
                 <div>
                     <h2 className="text-[18px] font-semibold mb-[12px]">Basic Info</h2>
-                    <div className="flex items-start gap-8">
-                        <div className="flex-1 space-y-4">
+                    <div className="flex items-start gap-[6px]">
+                        <div className="flex flex-col gap-[12px]">
                             <div className="flex items-center gap-[8px]">
                                 <MapPin className="w-[16px] h-[16px] text-[#292D32]" />
                                 <span className="text-[#535353] text-[12px] font-[400]">Mansoura, st 20</span>
@@ -43,7 +43,7 @@ export default function Definition() {
                                     <path d="M3.75374 8.7207L3.74707 11.8474C3.74707 12.694 4.4004 13.6007 5.2004 13.8674L7.32707 14.574C7.69374 14.694 8.3004 14.694 8.67374 14.574L10.8004 13.8674C11.6004 13.6007 12.2537 12.694 12.2537 11.8474V8.75404" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                     <path d="M14.2666 10V6" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
-                                <span className="text-[#535353] text-[12px] font-[400]">Master Degree</span>
+                                <span className="text-[#535353] text-[12px] font-[400] pt-[2px]">Master Degree</span>
                             </div>
                             <div className="flex items-center gap-[8px]">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,7 +56,7 @@ export default function Definition() {
                                     <path d="M7.00033 10V11.3333C7.00033 12 6.66699 12.3333 6.00033 12.3333H4.66699C4.00033 12.3333 3.66699 12 3.66699 11.3333V10C3.66699 9.33333 4.00033 9 4.66699 9H6.00033C6.66699 9 7.00033 9.33333 7.00033 10Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                     <path d="M12.3333 10V11.3333C12.3333 12 12 12.3333 11.3333 12.3333H10C9.33333 12.3333 9 12 9 11.3333V10C9 9.33333 9.33333 9 10 9H11.3333C12 9 12.3333 9.33333 12.3333 10Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
-                                <span className="text-blue-500 text-[12px] font-[400] cursor-pointer hover:underline">
+                                <span className="text-[#018AAF] text-[12px] font-[400] cursor-pointer hover:underline">
                                     Share QR Code
                                 </span>
                             </div>
