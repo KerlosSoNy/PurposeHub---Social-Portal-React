@@ -86,7 +86,7 @@ export default function Profile() {
                                     <img src="/profile/messages.svg" alt="" />
                                     Message
                                 </button>
-                            </div> : <Link className="flex flex-row rounded-[16px] gap-[4px] h-[40px] py-[6px] ps-[14px] pe-[16px] justify-center items-center text-white bg-[#018AAF]" to='/setting'>
+                            </div> : <Link to='/settings' className="flex flex-row rounded-[16px] gap-[4px] h-[40px] py-[6px] ps-[14px] pe-[16px] justify-center items-center text-white bg-[#018AAF]">
                                 <img src="/profile/edit.svg" alt="" />
                                 <span className="text-[16px] font-semibold">Edit Profile</span>
                             </Link>}

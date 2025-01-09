@@ -8,7 +8,7 @@ export const links = [
     {
         id: 2,
         name: 'Settings',
-        link: "/Settings",
+        link: "/settings",
         icon: '/icons/setting-2.svg'
     },
     {
