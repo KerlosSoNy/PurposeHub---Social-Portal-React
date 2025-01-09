@@ -139,7 +139,7 @@ export function useSignUp() {
     return {
         data,
         handleChange,
-        error,
+        error, errors,
         handleSubmit,
         setShowErrorToast,
         setShowSuccessToast,

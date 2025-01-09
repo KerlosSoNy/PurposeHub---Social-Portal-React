@@ -1,14 +1,14 @@
 'use client';
 import { CirclePlay } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
-import VideoPlay from './videoPlay';
+// import VideoPlay from './videoPlay';
 
 export const VideoPlayer = ({ link }: { link: string }) => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [thumbnail, setThumbnail] = useState<string | null>(null);
+    // const [isOpen, setIsOpen] = useState(false);
+    const [, setThumbnail] = useState<string | null>(null);
     const videoRef = useRef<HTMLVideoElement>(null);
     const canvasRef = useRef<HTMLCanvasElement>(null);
-
+    console.log(link)
     useEffect(() => {
         const video = videoRef.current;
         const canvas = canvasRef.current;
@@ -26,10 +26,10 @@ export const VideoPlayer = ({ link }: { link: string }) => {
             });
         }
     }, []);
-    const openVideo = () => {
-        setIsOpen(true);
-        document.body.style.overflow = 'hidden';
-    };
+    // const openVideo = () => {
+    //     setIsOpen(true);
+    //     document.body.style.overflow = 'hidden';
+    // };
     return (
         <div className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-row items-center justify-center z-[5000] w-[150px] h-[100px]'>
             <button

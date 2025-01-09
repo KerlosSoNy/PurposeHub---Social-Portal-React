@@ -6,7 +6,7 @@ import TrendingCourses from "../trendingComponent/trendingSection";
 import { useEffect, useState } from "react";
 
 export function RightSideBar() {
-    const [isSticky, setIsSticky] = useState(false);
+    const [, setIsSticky] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {

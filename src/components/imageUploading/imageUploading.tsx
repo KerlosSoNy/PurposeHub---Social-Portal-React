@@ -1,11 +1,11 @@
 import { useState, useRef } from 'react';
-import { Upload, Image as ImageIcon } from 'lucide-react';
+import { Image as ImageIcon } from 'lucide-react';
 
 export function ImageUpload({ coverImage, setCoverImage }: {
     coverImage: File | string | null, setCoverImage?: any
 }) {
     const [image, setImage] = useState<string | null>(null);
-    const [isDragging, setIsDragging] = useState(false);
+    const [, setIsDragging] = useState(false);
     const fileInputRef = useRef<HTMLInputElement>(null);
 
     const handleDragOver = (e: React.DragEvent) => {

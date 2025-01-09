@@ -1,4 +1,4 @@
-import { CheckCircle2, Maximize, Share2, X } from 'lucide-react';
+import { Maximize, Share2, X } from 'lucide-react';
 import { VideoPlayer } from '../video/videoPlayer';
 
 interface ReelCardProps {

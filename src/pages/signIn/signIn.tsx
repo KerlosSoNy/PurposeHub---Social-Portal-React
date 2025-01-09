@@ -27,7 +27,7 @@ export default function SignIn() {
                     </div>
                     <div className="flex flex-col
                     w-full lg:w-[443px] 
-                    gap-[clamp(2px,1.5vw,5px)]">
+                    gap-[clamp(2px,1.5vw,0px)]">
                         <InputAndLabel
                             value={data.email}
                             onChange={handleChange}

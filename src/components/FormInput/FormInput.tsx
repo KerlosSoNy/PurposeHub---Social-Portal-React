@@ -76,7 +76,7 @@ export default function InputAndLabel({
                         {visible ? (
                             <img src="/icons/password-eye.svg" alt="eye" className="w-[24px] h-[24px]" />
                         ) : (
-                            <img src="/icons/password-eye.svg" alt="eye" className="w-[24px] h-[24px]" />
+                            <img src="/icons/eye-crossed.svg" alt="eye" className="w-[24px] h-[24px]" />
                         )}
                     </button>
                 )}
