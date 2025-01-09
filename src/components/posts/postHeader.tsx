@@ -1,5 +1,6 @@
 import { EllipsisVertical, EyeOff } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router';
 
 interface PostHeaderProps {
     avatarUrl: string;
@@ -35,7 +36,7 @@ export function PostHeader({ avatarUrl, username, timestamp }: PostHeaderProps) 
                 <div>
                     <div className='flex flex-col sm:flex-row gap-[5px] sm:gap-[17px]'>
                         <div className="flex flex-col items-start gap-[1px]">
-                            <h2 className="font-bold">{username}</h2>
+                            <Link to={`/profile/${username}`} className="font-bold">{username}</Link>
                             <span className="text-[#AAAAAA] text-[14px]">{timestamp}</span>
                         </div>
                         <span className='text-blue-500 font-medium text-[16px]'>

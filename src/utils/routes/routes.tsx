@@ -5,6 +5,7 @@ import ForgetPassword from "../../pages/forget-password/forgetPassword";
 import ChangePassword from "../../pages/change-password/changePassword";
 import SignUp from "../../pages/signUp/signUp";
 import YourProfile from "../../pages/yourProfile/yourProfile";
+import Profile from "../../pages/profile/profile";
 
 
 export const routes = createBrowserRouter([
@@ -31,5 +32,9 @@ export const routes = createBrowserRouter([
     {
         path: "/complete-profile",
         element: <YourProfile />
+    },
+    {
+        path: "/profile/:id?",
+        element: <Profile />
     }
 ])
