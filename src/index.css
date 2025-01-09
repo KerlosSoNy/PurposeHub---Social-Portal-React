@@ -15,6 +15,16 @@ html {
     filter: invert(40%) sepia(80%) saturate(200%) hue-rotate(180deg);
 }
 
+.toast-error-bg{
+    background: rgb(242,191,189);
+background: linear-gradient(90deg, rgba(242,191,189,1) 0%, rgba(255,255,255,1) 25%, rgba(252,252,252,1) 100%);
+}
+
+.toast-success-bg{
+    background: rgb(242,191,189);
+    background: linear-gradient(90deg, #c2e7d3 0%, rgba(255,255,255,1) 25%, rgba(252,252,252,1) 100%);
+}
+
 
 .main-body{
     padding-left: clamp(20px,3.13vw,60px);
