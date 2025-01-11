@@ -105,7 +105,7 @@ const CustomSelectMenu: FC<CustomSelectMenuProps> = ({
             }}
         >
             {label ? (
-                <h1 className={`text-[16px] font-[400] text-[#26203B] mb-[11px]`}>
+                <h1 className={`text-[16px] font-[400] text-[#26203B] mb-[8px]`}>
                     {label}
                 </h1>
             ) : null}

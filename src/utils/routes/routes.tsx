@@ -13,6 +13,7 @@ import AddExperience from "../../pages/setting/subpages/experience/add/addExperi
 import Certificates from "../../pages/setting/subpages/certificates/certificates";
 import AddCertificates from "../../pages/setting/subpages/certificates/add/addCertificates";
 import ContactUs from "../../pages/contactSupport/contactUs";
+import Faqs from "../../pages/faq/faqs";
 
 
 export const routes = createBrowserRouter([
@@ -43,6 +44,10 @@ export const routes = createBrowserRouter([
     {
         path: "/contact-support",
         element: <ContactUs />
+    },
+    {
+        path: "/faqs",
+        element: <Faqs />
     },
     {
         path: "/settings",
