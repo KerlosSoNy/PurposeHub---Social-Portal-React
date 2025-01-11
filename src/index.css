@@ -42,8 +42,8 @@ input[type="date"]::-webkit-input-placeholder {
   input[type="date"]:-ms-input-placeholder {
     color: #9C9AA5!important;
   }
-  
-  .element::-webkit-scrollbar {
+
+  *::-webkit-scrollbar {
     display: none;
 }
 .element {
