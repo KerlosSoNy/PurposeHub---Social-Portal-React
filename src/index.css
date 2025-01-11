@@ -44,8 +44,13 @@ input[type="date"]::-webkit-input-placeholder {
   }
   
   .element::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    display: none;
 }
+.element {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+  
   input[type="date"]::-ms-input-placeholder {
     color: #9C9AA5!important;
   }

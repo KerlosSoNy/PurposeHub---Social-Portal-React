@@ -20,10 +20,10 @@ export default function SignIn() {
                 lg:w-[calc(100%-626px)] 
                 ${error?.email || error?.password ? "pt-[10px] sm:pt-[10px] xl:pt-[7px] 3xl:pt-[107px]" : "pt-[20px] sm:pt-[50px] xl:pt-[60px] 3xl:pt-[127px]"} justify-between gap-[50px]`}>
                 <div className="flex flex-col justify-center items-start bg-white">
-                    <div className="flex w-full flex-col items-center xl:items-start justify-start mb-[15px] 3xl:mb-[24px]">
+                    <div className="flex flex-col w-full items-center xl:items-start justify-start mb-[15px] 3xl:mb-[24px] m-auto">
                         <img src="/icons/logo.png" alt="logo" className="w-[70px] h-[59px]" />
                         <h2 className="text-black text-[32px] font-semibold mt-[20px] mb-[8px] 3xl:mt-[32px] 3xl:mb-[12px]">Sign in </h2>
-                        <span className="text-[16px] text-[#667085]">Wecome Back! 👋  Log-in to get started</span>
+                        <span className="text-[16px] text-[#667085]">Welcome Back! 👋  Log-in to get started</span>
                     </div>
                     <div className="flex flex-col
                     w-full lg:w-[443px] 
