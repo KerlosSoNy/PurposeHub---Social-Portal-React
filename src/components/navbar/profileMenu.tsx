@@ -68,7 +68,7 @@ export default function ProfileMenu({ setIsOpen, isOpen }: { setIsOpen: React.Di
                     <span className="text-[12px] font-[400] text-[#777777] -mt-1">hide all</span>
                 </div>
             </Link>
-            <Link to='/profile' className="flex flex-row items-start  gap-[8px] px-5">
+            <Link to='/terms' className="flex flex-row items-start  gap-[8px] px-5">
                 <img src="/icons/document.svg" alt="Document" className="w-[24px]" />
                 <div className="flex flex-col">
                     <span className="text-[14px] font-[400] text-[#444444]">Terms & Conditions</span>
