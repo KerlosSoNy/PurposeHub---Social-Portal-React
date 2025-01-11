@@ -34,7 +34,7 @@ export function ReelsBar() {
     };
 
     return (
-        <div className="rounded-[20px] md:w-[clamp(350px,48.4rem,1468px)] 2xl:w-[clamp(350px,60rem,1668px)] max-w-4xl relative my-[16px]">
+        <div className="rounded-[20px] max-w-4xl relative my-[16px]">
             {showLeftButton && <div className='absolute left-0 top-1/2 pt-16'>
                 <ScrollButton direction="left" onClick={() => scroll('left')} /></div>}
             {showRightButton && <div className='absolute right-0 top-1/2 pt-16'>

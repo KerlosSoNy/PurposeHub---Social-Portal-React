@@ -34,7 +34,7 @@ export function StoriesBar() {
     };
 
     return (
-        <div className="bg-white rounded-[20px] shadow-lg py-4 w-[90vw] md:w-[clamp(350px,48.4rem,1468px)] 2xl:w-[clamp(350px,60rem,1668px)] max-w-4xl mx-auto relative">
+        <div className="bg-white rounded-[20px] shadow-lg py-4 w-full max-w-4xl mx-auto relative">
             {showLeftButton && <ScrollButton direction="left" onClick={() => scroll('left')} />}
             {showRightButton && <ScrollButton direction="right" onClick={() => scroll('right')} />}
 

@@ -46,7 +46,7 @@ export default function Profile() {
                 <div className="hidden !w-[clamp(300px,337px,369px)] xl:flex flex-row justify-center relative">
                     <SideMenu />
                 </div>
-                <div className="w-[90vw] flex flex-col gap-[24px] md:w-[clamp(350px,48.4rem,1468px)] 2xl:w-[clamp(350px,60rem,1668px)] max-w-4xl">
+                <div className="flex flex-col w-[98%] md:w-[70%] xl:w-[55%] gap-[24px]">
                     <div className="bg-white">
                         <ProfileHeader
                             coverImage="https://images.unsplash.com/photo-1579546929518-9e396f3cc809"

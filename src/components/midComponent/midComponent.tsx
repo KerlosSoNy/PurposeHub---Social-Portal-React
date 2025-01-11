@@ -5,7 +5,7 @@ import { StoriesBar } from "../scroller/storiesBar";
 
 export default function MidComponent() {
     return (
-        <div className="flex flex-col gap-[24px]">
+        <div className="flex flex-col w-[98%] md:w-[70%] xl:w-[55%] gap-[24px]">
             <CreatePost />
             <StoriesBar />
             <Post
