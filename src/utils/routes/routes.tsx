@@ -15,6 +15,7 @@ import AddCertificates from "../../pages/setting/subpages/certificates/add/addCe
 import ContactUs from "../../pages/contactSupport/contactUs";
 import Faqs from "../../pages/faq/faqs";
 import Terms from "../../pages/terms/terms";
+import Privacy from "../../pages/privacy/privacy";
 
 
 export const routes = createBrowserRouter([
@@ -53,6 +54,10 @@ export const routes = createBrowserRouter([
     {
         path: "/terms",
         element: <Terms />
+    },
+    {
+        path: "/privacy",
+        element: <Privacy />
     },
     {
         path: "/settings",
