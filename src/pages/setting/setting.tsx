@@ -1,4 +1,6 @@
+import { Outlet } from "react-router";
 import Navbar from "../../components/navbar/navbar";
+import SettingSideMenu from "../../components/setting/sideMenu/settingSideMenu";
 import SideMenu from "../../components/sideMenu/sideMenu";
 
 export default function Setting() {
@@ -9,6 +11,8 @@ export default function Setting() {
                 <div className="hidden !w-[clamp(300px,337px,369px)] xl:flex flex-row justify-center relative">
                     <SideMenu />
                 </div>
+                <SettingSideMenu />
+                <Outlet />
             </div>
         </div>
     )

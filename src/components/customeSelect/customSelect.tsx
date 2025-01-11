@@ -28,6 +28,7 @@ interface CustomSelectMenuProps {
     error?: string;
     width?: string;
     higth?: string;
+    isGray?: boolean;
 }
 
 const CustomSelectMenu: FC<CustomSelectMenuProps> = ({
@@ -43,6 +44,7 @@ const CustomSelectMenu: FC<CustomSelectMenuProps> = ({
     loading,
     error,
     width,
+    isGray = false,
     higth,
 }) => {
     const [selectedValue, setSelectedValue] = useState<any>(null);
@@ -72,8 +74,9 @@ const CustomSelectMenu: FC<CustomSelectMenuProps> = ({
             borderColor: error
                 ? "red"
                 : state.isFocused
-                    ? "blue"
-                    : '#018AAF',
+                    ? "rgba(94, 94, 94,0.4)"
+                    : isGray ? "rgba(94, 94, 94,0.4)"
+                        : '#018AAF',
             borderWidth: error ? "1px" : "1px",
             boxShadow: '0px 8px 8px rgba(0, 0, 0, 0.05)',
             "&:hover": {

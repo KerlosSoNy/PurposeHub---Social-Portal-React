@@ -7,7 +7,10 @@ type InputAndLabelProps = {
     placeholder?: string;
     icon?: JSX.Element;
     see?: boolean;
+    isClose?: boolean;
     isChecked?: boolean;
+    isGray?: boolean;
+    shadow?: boolean;
     isRequired?: boolean;
     type?: React.ComponentProps<"input">["type"];
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -18,11 +21,14 @@ export default function InputAndLabel({
     error,
     placeholder,
     isRequired,
+    isGray = false,
     imgSrc,
     icon,
+    shadow = true,
     see = false,
     type,
     isChecked,
+    isClose = false,
     onChange,
     ...props
 }: InputAndLabelProps) {
@@ -42,7 +48,7 @@ export default function InputAndLabel({
 
     return (
         <div
-            className={`flex flex-col font-inter gap-[clamp(1px,1.5vw,5px)] my-2 relative text-black w-full `}
+            className={`flex flex-col font-inter ${isClose ? "" : "gap-[clamp(1px,1.5vw,5px)]"}  my-2 relative text-black w-full `}
         >
             <div className="flex flex-row ">
                 {label && (<label
@@ -55,7 +61,7 @@ export default function InputAndLabel({
                 </label>)}
 
             </div>
-            <div className={`relative h-[48px] rounded-[8px] bg-white overflow-hidden w-[100%] flex flex-row shadow-lg border-[1px] ${error ? "border-[#E11A0B]" : "border-[#018AAF]"} `}>
+            <div className={`relative h-[48px] rounded-[8px] bg-white overflow-hidden w-[100%] flex flex-row shadow-lg border-[1px] ${error ? "border-[#E11A0B]" : isGray ? "border-[#5E5E5E]/[0.4]" : "border-[#018AAF]"} ${shadow ? "shadow-lg" : ""} `}>
                 <input
                     placeholder={placeholder}
                     id={label}

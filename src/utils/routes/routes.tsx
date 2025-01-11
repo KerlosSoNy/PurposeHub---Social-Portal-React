@@ -7,6 +7,7 @@ import SignUp from "../../pages/signUp/signUp";
 import YourProfile from "../../pages/yourProfile/yourProfile";
 import Profile from "../../pages/profile/profile";
 import Setting from "../../pages/setting/setting";
+import PersonalInformation from "../../pages/setting/subpages/personalInformation/personalInformation";
 
 
 export const routes = createBrowserRouter([
@@ -36,7 +37,13 @@ export const routes = createBrowserRouter([
     },
     {
         path: "/settings",
-        element: <Setting />
+        element: <Setting />,
+        children: [
+            {
+                path: "",
+                element: <PersonalInformation />
+            }
+        ]
     },
     {
         path: "/profile/:id?",
