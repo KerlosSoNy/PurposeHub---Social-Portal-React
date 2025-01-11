@@ -8,6 +8,11 @@ import YourProfile from "../../pages/yourProfile/yourProfile";
 import Profile from "../../pages/profile/profile";
 import Setting from "../../pages/setting/setting";
 import PersonalInformation from "../../pages/setting/subpages/personalInformation/personalInformation";
+import Experience from "../../pages/setting/subpages/experience/experience";
+import AddExperience from "../../pages/setting/subpages/experience/add/addExperience";
+import Certificates from "../../pages/setting/subpages/certificates/certificates";
+import AddCertificates from "../../pages/setting/subpages/certificates/add/addCertificates";
+import ContactUs from "../../pages/contactSupport/contactUs";
 
 
 export const routes = createBrowserRouter([
@@ -36,12 +41,30 @@ export const routes = createBrowserRouter([
         element: <YourProfile />
     },
     {
+        path: "/contact-support",
+        element: <ContactUs />
+    },
+    {
         path: "/settings",
         element: <Setting />,
         children: [
             {
                 path: "",
                 element: <PersonalInformation />
+            },
+            {
+                path: "experiences",
+                element: <Experience />
+            }, {
+                path: "experiences/:func/:id?",
+                element: <AddExperience />
+            }, {
+                path: "certificates",
+                element: <Certificates />
+            },
+            {
+                path: "certificates/:func/:id?",
+                element: <AddCertificates />
             }
         ]
     },

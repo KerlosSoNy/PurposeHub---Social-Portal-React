@@ -28,7 +28,6 @@ export default function Profile() {
         { name: 'Certificates', isActive: activeTab === 'Certificates' },
         { name: 'Groups', isActive: activeTab === 'Groups' },
     ];
-    console.log(id)
     const companies = [
         {
             name: 'Overlanding',

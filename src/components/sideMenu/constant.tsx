@@ -14,28 +14,28 @@ export const links = [
     {
         id: 3,
         name: 'Wallet',
-        link: "/home",
+        link: "/Wallet",
         icon: '/icons/wallet-2.png'
     }, {
         id: 4,
         name: 'My Courses',
-        link: "/home",
+        link: "/courses",
         icon: '/icons/presentation-chart.png'
     },
     {
         id: 5,
         name: 'Promotion & Ads',
-        link: "/home",
+        link: "/promotion",
         icon: '/icons/favorite-chart.svg'
     }, {
         id: 6,
         name: 'Groups',
-        link: "/home",
+        link: "/groups",
         icon: '/icons/people.svg'
     }, {
         id: 7,
         name: 'Reels',
-        link: "/home",
+        link: "/reels",
         icon: '/icons/video-play.png'
     }
 ]
@@ -44,67 +44,67 @@ export const settingLinks = [
     {
         id: 1,
         name: 'Personal Information',
-        link: "/home",
+        link: "/settings",
         icon: '/settings/person.svg'
     },
     {
         id: 2,
         name: 'Experiences',
-        link: "/home",
+        link: "/settings/experiences",
         icon: '/settings/experience.svg'
     },
     {
         id: 3,
         name: 'Certificates',
-        link: "/home",
+        link: "/settings/certificates",
         icon: '/settings/certificate.svg'
     },
     {
         id: 4,
         name: 'Privacy',
-        link: "/home",
+        link: "/settings/privacy",
         icon: '/settings/privacy.svg'
     },
     {
         id: 5,
         name: 'Blocked Users',
-        link: "/home",
+        link: "/settings/blocked",
         icon: '/settings/blocked.svg'
     },
     {
         id: 6,
         name: 'Activity log',
-        link: "/home",
+        link: "/settings/activity",
         icon: '/settings/activity.svg'
     },
     {
         id: 7,
         name: 'Change Password',
-        link: "/home",
+        link: "/settings/change-password",
         icon: '/settings/lock.svg'
     },
     {
         id: 8,
         name: 'Change Email',
-        link: "/home",
+        link: "/settings/change-email",
         icon: '/settings/email.svg'
     },
     {
         id: 9,
         name: 'Recovery Email',
-        link: "/home",
+        link: "/settings/recovery-email",
         icon: '/settings/email.svg'
     },
     {
         id: 10,
         name: 'Manage Devices',
-        link: "/home",
+        link: "/settings/devices",
         icon: '/settings/device.svg'
     },
     {
         id: 11,
         name: 'Deactivate Account',
-        link: "/home",
+        link: "/settings/deactivate",
         icon: '/settings/activity.svg'
     },
 ]

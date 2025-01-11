@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 
 export interface Experience {
     id: number;
@@ -14,10 +15,11 @@ export interface Experience {
 
 interface ExperienceCardProps {
     last?: boolean;
+    isEditable?: boolean;
     experience: Experience;
 }
 
-export function ExperienceCard({ experience, last = false }: ExperienceCardProps) {
+export function ExperienceCard({ isEditable, experience, last = false }: ExperienceCardProps) {
     return (
         <div className={`bg-white pb-[16px] pt-[18px] rounded-[8px] flex gap-4 ${!last && "border-b-[1px] border-[#F4F4F4]"}`}>
             <div className="flex-shrink-0">
@@ -36,7 +38,18 @@ export function ExperienceCard({ experience, last = false }: ExperienceCardProps
                             {experience.company} · {experience.location}
                         </p>
                     </div>
-
+                    {
+                        isEditable && (
+                            <div className="flex flex-row gap-[8px]">
+                                <Link to={`/settings/experiences/edit/${experience.id}`}>
+                                    <img src="/settings/edit.svg" alt="edit" />
+                                </Link>
+                                <button title="Delete" type="button">
+                                    <img src="/settings/trash.svg" alt="delete" />
+                                </button>
+                            </div>
+                        )
+                    }
                 </div>
 
                 <div className="mt-2 flex flex-row gap-[8px]">

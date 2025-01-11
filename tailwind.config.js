@@ -7,6 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        "brand":"#018AAF",
         'background': '#fafafa',
       },
       screens:{
@@ -20,6 +21,7 @@ export default {
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
       },
     }
   },

@@ -56,7 +56,7 @@ export default function InputAndLabel({
                     htmlFor={label}
                     className={`mb-[8px] text-gray-01 !font-medium text-[clamp(16px,1.5vw,18px)] flex flex-row items-center dark:text-shadow_blue `}
                 >
-                    {label && <span className="ms-[1px] text-[16px] font-[400]">{label}</span>}
+                    {label && <span className="ms-[1px] text-[16px] text-[#26203B] font-[400]">{label}</span>}
                     {isRequired && <span className="text-errorState block ms-1">*</span>}
                 </label>)}
 

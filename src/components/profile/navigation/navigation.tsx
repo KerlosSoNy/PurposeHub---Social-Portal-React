@@ -21,7 +21,7 @@ export function NavigationTabs({ tabs, onTabChange }: NavigationTabsProps) {
                         : 'text-[#7E939A]'
                         }`}
                 >
-                    {tab.name}
+                    {tab.name.charAt(0).toUpperCase() + tab.name.slice(1)}
                 </button>
             ))}
         </nav>
