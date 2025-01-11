@@ -10,9 +10,9 @@ export default function ChangePassword() {
     return (
         <div className="!bg-white font-inter min-h-screen flex flex-row justify-center p-[20px] sm:p-[32px]">
             <MainCarousel images={imagesPasswords} />
-            <div className={`flex flex-col items-center justify-evenly xl:justify-between  w-full 
-            lg:w-[calc(100%-626px)] 
-            ${error?.password ? "pt-[10px] sm:pt-[47px] xl:pt-[97px] 3xl:pt-[147px]" : "pt-[20px] sm:pt-[50px] xl:pt-[172px] "} gap-[50px]`}>
+            <div className={`flex flex-col items-center justify-evenly xl:justify-between w-full 
+            xl:w-[calc(100%-626px)] 
+            ${error?.password ? "pt-[10px] sm:pt-[47px] xl:pt-[97px] 3xl:pt-[147px]" : "pt-[20px] sm:pt-[50px] xl:pt-[142px] "} gap-[50px]`}>
                 <div className="flex flex-col justify-center max-w-[434px] items-start bg-white">
 
                     <div className="flex flex-col items-center xl:items-start justify-start mb-[15px] 3xl:mb-[24px]">

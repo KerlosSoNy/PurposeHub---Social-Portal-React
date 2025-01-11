@@ -14,7 +14,7 @@ export default function ForgetPassword() {
 
             <div className={`flex flex-col items-center justify-evenly xl:justify-between  w-full 
             lg:w-[calc(100%-626px)] 
-            ${error?.email ? "pt-[10px] sm:pt-[47px] xl:pt-[97px] 3xl:pt-[147px]" : "pt-[20px] sm:pt-[50px] xl:pt-[182px] "} gap-[50px]`}>
+            ${error?.email ? "pt-[10px] sm:pt-[47px] xl:pt-[97px] 3xl:pt-[147px]" : "pt-[20px] sm:pt-[50px] xl:pt-[162px] "} gap-[50px]`}>
                 <div className="flex flex-col justify-center max-w-[434px] over items-start bg-white">
                     <div className="flex flex-col items-center xl:items-start justify-start mb-[15px] 3xl:mb-[24px]">
                         <img src="/icons/logo.png" alt="logo" className="w-[70px] h-[59px] z-[0]" />
